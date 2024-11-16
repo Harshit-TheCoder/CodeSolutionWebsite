@@ -15,7 +15,8 @@
     width: 100%;
 }
 .program-container{
-    margin-top: 0;
+    margin:10px;
+    padding:10px;
     display: flex;
     flex-direction: column;
     gap:3px;
@@ -24,13 +25,18 @@
     
     /* background-color: #212529; */
     background-color:#000012;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 .program-question-solution{
     height: 650px;
-    
+    position: relative;
 }
-.question-locator-div{
+.copy-button{
+    position: absolute;
+    top:40px;
+    right:10px;
+}
+.question-locator-div, .question-locator-div-bar{
     border-radius: 5px;
     /* background-color: #212529; */
 }
@@ -40,10 +46,32 @@
     color: #ffffff;
     /* border: 1px solid #ffffff; */
 }
+.question-locator-div-bar li{
+    border-radius: 50px;
+    background-color: #13001f;
+    color: #ffffff;
+    /* border: 1px solid #ffffff; */
+}
 .question-locator{
     z-index:5;
+    /* background-color: #13001f; */
+}
+.question-locator-bar{
+    z-index:5;
+    /* background-color: #13001f; */
 }
 .question-locator ol{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    height: 550px;
+    text-align: center;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Remove scrollbar width */
+    scrollbar-color: transparent transparent; /* Make scrollbar invisible */
+    list-style: none;
+}
+.question-locator-bar ol{
     display: flex;
     flex-direction: column;
     gap:10px;
@@ -74,3 +102,45 @@
 .question-locator ol .question-locator-div li :hover{
     cursor: pointer;
 }
+
+.question-locator-bar ol .question-locator-div-bar li{
+    text-decoration: none;
+    font-family: cursive;
+
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: #20282c;
+    /* color: #06e6ff; */
+    color: white;
+    /* color: greenyellow; */
+    /* border: 1px solid white; */
+}
+.question-locator-bar ol .question-locator-div-bar li :hover{
+    cursor: pointer;
+}
+
+@media (min-width: 992px){
+    .question-button{
+        display: none;
+    }
+    .question-locator{
+        display: block;
+    }
+    .program-container{
+        width: 85%;
+    }
+}
+@media (max-width: 992px){
+    .question-button{
+        display: block;
+    }
+    .question-locator{
+        display: none;
+    }
+    .program-container{
+        width: 100%;
+    }
+}
+
+

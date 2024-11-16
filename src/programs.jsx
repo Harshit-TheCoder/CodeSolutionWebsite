@@ -17,9 +17,15 @@ import java from "./components/Java_solutions";
 import python from "./components/Python_solutions";
 import "./css/programs.css";
 import "./css/index.css";
+import cLogo from './components/skills/C.png';
+import cppLogo from './components/skills/CPP.png';
+import javaLogo from './components/skills/Java.png';
+import pythonLogo from './components/skills/Python.png';
+
 
 function Programs() {
-  const Programming_Language = ["C", "C++", "Java", "Python"];
+  const logo = [cLogo, cppLogo, javaLogo, pythonLogo];
+  const Programming_Language = ["C", "CPP", "Java", "Python"];
   const [selectedQuestion, setSelectedQuestion] = useState(null);
   const [code, setCode] = useState(null);
   const [languageClass, setLanguageClass] = useState(""); // To store the dynamic class for Prism.js
@@ -79,9 +85,10 @@ function Programs() {
     <body>
       <Header />
       <Main>
-        <div className="container">
-          <div className="row container-div">
-            {/* <div className="col-3 question-locator">
+        {/* <div className="container">
+          <div className="row container-div"> */}
+          <div style={{display:"flex", flexDirection:"row", }}>
+            <div className="question-locator" style={{width:"15%"}}>
               <center>
                 <h3 style={{ color: "#1560bd", fontFamily: "serif", fontWeight: "1000" }}>
                   Questions
@@ -94,10 +101,10 @@ function Programs() {
                   </div>
                 ))}
               </ol>
-            </div> */}
-            <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px"}}>
+            </div>
+            {/* <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px"}}>
                 Questions
-                </button>
+            </button> */}
 
                 <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
                 <div class="offcanvas-header">
@@ -105,7 +112,7 @@ function Programs() {
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <div className="col-12 question-locator">
+                    <div className="col-12 question-locator-bar">
                         <center>
                             <h3 style={{ color: "#1560bd", fontFamily: "serif", fontWeight: "1000" }}>
                             Questions
@@ -113,7 +120,7 @@ function Programs() {
                         </center>
                         <ol>
                             {headings.map((heading, index) => (
-                            <div className="question-locator-div" key={index}>
+                            <div className="question-locator-div-bar" key={index}>
                                 <li onClick={() => handleClick(heading)}>{heading}</li>
                             </div>
                             ))}
@@ -121,47 +128,40 @@ function Programs() {
                     </div>
                 </div>
             </div>
-            <div className="col-12 program-container">
+            <div className="program-container" style={{width:"85%"}}>
               <nav className="navbar navbar-dark navbar-expand-lg bg-transparent z-index-4 ">
-                <div className="container-fluid">
-                  <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav1"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                  </button>
+                <div className="container-fluid" style={{display:"flex", flexDirection:"row", gap:"3px"}}>
+                    <button class="btn btn-success question-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px", height:"40px"}}>
+                        Questions
+                    </button>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span className="navbar-toggler-icon"></span>
+                    </button>
                     <div className="collapse navbar-collapse" id="navbarNav1">
-                    <ul className="navbar-nav list_items language-locator">
-                      {Programming_Language.map((language, index) => (
-                        <div className="question-locator-div" key={index}>
-                          <li className="nav-item"
-                            onClick={() => handleClickLanguage(selectedQuestion?.heading, index)}>
-                            {language}
-                          </li>
-                        </div>
-                      ))}
-                    </ul>
-                  </div>
+                      <ul className="navbar-nav list_items language-locator">
+                        {Programming_Language.map((language, index) => (
+                          <div className="question-locator-div" key={index}>
+                            <li className="nav-item"
+                              onClick={() => handleClickLanguage(selectedQuestion?.heading, index)}>
+                              {/* {language} */}
+                              {/* {<img src={`./components/skills/${language}.png`} alt="" />} */}
+                              <img src={logo[index]} alt={`${language} logo`} />
+                            </li>
+                          </div>
+                        ))}
+                      </ul>
+                    </div>
                 </div>
               </nav>
               <div>
                 <div className="program-question-heading">
                   {selectedQuestion && (
                     <>
-                      <h1
-                        style={{
-                          color: "#ffed00",fontFamily: "serif",fontWeight: "1000",
-                        }}
-                      >
+                    {/* #ffed00 */}
+                      <h1 style={{color: "green",fontFamily: "Poppins",fontWeight: "800",padding:"3px"}}>
                         {selectedQuestion.heading}:
                       </h1>
-                      <p style={{
-                          color: "#ffffff",fontStyle: "italic",fontWeight: "500",
-                        }}>
+                      <p style={{ color: "#ffffff",fontStyle: "italic",fontWeight: "500"}}>
                         {selectedQuestion.description}
                       </p>
                     </>
@@ -171,15 +171,13 @@ function Programs() {
                   <div className="program-question-solution">
                     {selectedQuestion && (
                       <>
-                        <h5 style={{color: "#ffed00",fontFamily: "serif",fontWeight: "1000",}}>Solution:</h5>
-                        <button className="btn btn-primary" onClick={copyToClipboard}>
-                          Copy to Clipboard
+                      {/* #ffed00 */}
+                        <h4 style={{color: "green",fontFamily: "Poppins",fontWeight: "800",}}>Solution:</h4>
+                        {/* <button className="btn btn-primary" onClick={copyToClipboard} style={{height:"40px", width:"100px"}}>Copy</button> */}
+                        <pre style={{overflowY: "scroll",height: "550px",fontFamily: "consolas",padding: "3px",margin: "3px",}}id="code">
+                        <button className="btn btn-warning copy-button" onClick={copyToClipboard} style={{height:"40px", width:"100px"}}>
+                            {/* <img src={copyimg} alt="" style={{ width:"35px", height:"35px"}} /> */}Copy
                         </button>
-                        <pre
-                          style={{
-                            overflowY: "scroll",height: "550px",fontFamily: "consolas",padding: "3px",margin: "3px",
-                          }}
-                          id="code">
                           <code ref={codeRef} className={languageClass}>
                             {code}
                           </code>
@@ -191,7 +189,8 @@ function Programs() {
               </div>
             </div>
           </div>
-        </div>
+          {/* </div> */}
+        {/* </div> */}
       </Main>
     </body>
   );
