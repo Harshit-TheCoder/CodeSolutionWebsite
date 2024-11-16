@@ -20,13 +20,14 @@
     flex-direction: column;
     gap:3px;
     z-index:3;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     
     /* background-color: #212529; */
-    background-color:#13001f;
+    background-color:#000012;
+    border: 1px solid green;
 }
 .program-question-solution{
-    height: 550px;
+    height: 650px;
     
 }
 .question-locator-div{
@@ -60,7 +61,7 @@
 .question-locator ol .question-locator-div li{
     text-decoration: none;
     font-family: cursive;
-    font-style: italic;
+
     font-weight: 500;
     font-size: 18px;
     border-radius: 50px;

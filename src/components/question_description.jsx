@@ -23,7 +23,8 @@ const questions = {
                     for integers.`,
     "Quick Sort":`Develop a Program to sort a given one dimensional array with Quick Sort logic. The logic should be applicable only
                     for integers.`,
-    
+    "Linked List Insertion":`Given a linked list and an integer value val, insert a new node with that value at the beginning (before the head) of the list and return the updated linked list.
+    `,
 };
 
 export default questions;

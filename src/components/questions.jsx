@@ -14,8 +14,13 @@ const headings= [
    
   "Quick Sort",
   
-    "Upcoming",
-    "Upcoming",
+    "Linked List Insertion",
+    "Linked List Deletion",
+    "Linked List Searching",
+    "Doubly Linked List",
+    "Doubly Linked List",
+    "Doubly Linked List",
+    "Doubly Linked List",
     "Upcoming",
     "Upcoming",
     
