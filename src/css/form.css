@@ -1,0 +1,34 @@
+label{
+    color:orangered;
+    font-family: serif;
+    font-size:20px;
+}
+h1{
+    color:maroon;
+}
+.input-div, input{
+    background-color: rgb(250,250,250);
+    outline:none; 
+     border:0;
+    width: 215px;
+    height:35px;
+}
+.input-div{
+    display: inline;
+    position: relative;
+    border:1px solid #2c3e50;
+    width: 240px;
+    height:40px;
+}
+.pass-icon{
+    width:30px;
+    position: absolute;
+    left:205px;
+    bottom:5px;
+}
+.email-icon, .user-icon{
+    width:30px;
+    position: absolute;
+    right:5px;
+    bottom:5px;
+}

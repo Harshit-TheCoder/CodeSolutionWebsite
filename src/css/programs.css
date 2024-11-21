@@ -1,0 +1,169 @@
+
+.language-locator{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:30px;
+    list-style: none;
+    
+}
+.language-locator li a{
+    text-decoration: none;
+}
+.language-locator{
+    margin:0;
+    width: 100%;
+}
+.program-container{
+    margin:10px;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+    z-index:3;
+    border-radius: 10px;
+    flex:1;
+    /* background-color: #212529; */
+    /* background-color:#000012; */
+    
+    /* border: 1px solid green; */
+}
+.program-question-solution{
+    height: 650px;
+    position: relative;
+}
+.copy-button{
+    position: absolute;
+    top:40px;
+    right:10px;
+}
+.question-locator-div, .question-locator-div-bar{
+    border-radius: 5px;
+    /* background-color: rgb(38, 63, 87); */
+    /* background-color: #212529; */
+}
+.question-locator-div li{
+    border-radius: 50px;
+    /* background-color: #13001f; */
+    color: #ffffff;
+    /* border: 1px solid #ffffff; */
+}
+.question-locator-div-bar li{
+    border-radius: 50px;
+    background-color: #13001f;
+    color: #ffffff;
+    /* border: 1px solid #ffffff; */
+}
+.question-locator{
+    position: relative;
+    z-index:5;
+    width: 15%;
+    min-width: 15%;
+    max-width: 45%;
+    overflow: auto;
+    height: 90vh;
+    resize: horizontal;
+    border-right: 2px solid #ccc;
+    /* background-color: #13001f; */
+    background-color: rgb(38, 63, 87);
+}
+
+
+.question-locator-bar{
+    z-index:5;
+    /* background-color: #13001f; */
+}
+.question-locator ol{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    height: 550px;
+    text-align: center;
+    overflow-y: scroll;
+    scrollbar-width: none; /*Remove scrollbar width */
+    scrollbar-color:transparent transparent; /*Make scrollbar invisible*/
+    list-style: none;
+}
+.question-locator-bar ol{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    height: 550px;
+    text-align: center;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Remove scrollbar width */
+    scrollbar-color: transparent transparent; /* Make scrollbar invisible */
+    list-style: none;
+}
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar width */
+    background: transparent; /* Make scrollbar invisible */
+    }
+.question-locator ol .question-locator-div li{
+    text-decoration: none;
+    font-family: cursive;
+
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: #20282c;
+    /* color: #06e6ff; */
+    color: white;
+    /* color: greenyellow; */
+    /* border: 1px solid white; */
+}
+.question-locator ol .question-locator-div li :hover{
+    cursor: pointer;
+}
+
+.question-locator-bar ol .question-locator-div-bar li{
+    text-decoration: none;
+    font-family: cursive;
+
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: #20282c;
+    /* color: #06e6ff; */
+    color: white;
+    /* color: greenyellow; */
+    /* border: 1px solid white; */
+}
+.question-locator-bar ol .question-locator-div-bar li :hover{
+    cursor: pointer;
+}
+
+@media (min-width: 992px){
+    .question-button{
+        display: none;
+    }
+    .question-locator{
+        display: block;
+    }
+    .program-container{
+        width: 85%;
+    }
+    .program-question-solution pre {
+        overflow-y: scroll;height: 550px;font-family: "consolas";padding: "3px";margin: "3px";
+    }
+}
+@media (max-width: 992px){
+    .question-button{
+        display: block;
+    }
+    .question-locator{
+        display: none;
+    }
+    .program-container{
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+    }
+    .program-question-solution pre {
+        max-width: 100%; /* Ensure the code block adapts to the container */
+        overflow-x: scroll;
+        padding: 1px;margin: 0;
+    }
+}
+
+
