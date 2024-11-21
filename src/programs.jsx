@@ -30,7 +30,30 @@ function Programs() {
   const [code, setCode] = useState(null);
   const [languageClass, setLanguageClass] = useState(""); // To store the dynamic class for Prism.js
   const codeRef = useRef();
+  // const sideBarRef = useRef(null);
+  // const [isResizing, setIsResizing] = useState(false);
+  // const handleMouseDown = () =>{
+  //   setIsResizing(true);
+  //   document.body.style.cursor = "col-resize";
+  //   document.addEventListener("mousemove", handleMouseMove);
+  //   document.addEventListener("mouseup", handleMouseUp);
+  // };
 
+  // const handleMouseMove = (e) =>{
+  //     if(!isResizing) return;
+  //     const sidebarLeft = sideBarRef.current.getBoundingClientRect().left;
+  //     const newWidth = e.clientX - sidebarLeft;
+  //     if(newWidth >= 150 && newWidth <= 500){
+  //       sideBarRef.current.style.width = `${newWidth}px`;
+  //     }
+  // };
+
+  // const handleMouseUp = () =>{
+  //   setIsResizing(false);
+  //   document.body.style.cursor="";
+  //   document.removeEventListener("mousemove", handleMouseMove);
+  //   document.removeEventListener("mouseup", handleMouseUp);
+  // }
   const handleClickLanguage = (heading, idx) => {
     let selectedCode = null;
     let langClass = "";
@@ -88,7 +111,7 @@ function Programs() {
         {/* <div className="container">
           <div className="row container-div"> */}
           <div style={{display:"flex", flexDirection:"row", }}>
-            <div className="question-locator" style={{width:"15%"}}>
+            <div  className="question-locator">
               <center>
                 <h3 style={{ color: "#1560bd", fontFamily: "serif", fontWeight: "1000" }}>
                   Questions
@@ -101,6 +124,7 @@ function Programs() {
                   </div>
                 ))}
               </ol>
+              
             </div>
             {/* <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px"}}>
                 Questions
@@ -125,10 +149,11 @@ function Programs() {
                             </div>
                             ))}
                         </ol>
+
                     </div>
                 </div>
             </div>
-            <div className="program-container" style={{width:"85%"}}>
+            <div className="program-container">
               <nav className="navbar navbar-dark navbar-expand-lg bg-transparent z-index-4 ">
                 <div className="container-fluid" style={{display:"flex", flexDirection:"row", gap:"3px"}}>
                     <button class="btn btn-success question-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px", height:"40px"}}>
@@ -174,7 +199,7 @@ function Programs() {
                       {/* #ffed00 */}
                         <h4 style={{color: "green",fontFamily: "Poppins",fontWeight: "800",}}>Solution:</h4>
                         {/* <button className="btn btn-primary" onClick={copyToClipboard} style={{height:"40px", width:"100px"}}>Copy</button> */}
-                        <pre style={{overflowY: "scroll",height: "550px",fontFamily: "consolas",padding: "3px",margin: "3px",}}id="code">
+                        <pre id="code">
                         <button className="btn btn-warning copy-button" onClick={copyToClipboard} style={{height:"40px", width:"100px"}}>
                             {/* <img src={copyimg} alt="" style={{ width:"35px", height:"35px"}} /> */}Copy
                         </button>
@@ -192,6 +217,7 @@ function Programs() {
           {/* </div> */}
         {/* </div> */}
       </Main>
+      {/* <script src="programs.js" ></script> */}
     </body>
   );
 }
