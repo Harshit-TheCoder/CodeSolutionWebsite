@@ -30,30 +30,8 @@ function Programs() {
   const [code, setCode] = useState(null);
   const [languageClass, setLanguageClass] = useState(""); // To store the dynamic class for Prism.js
   const codeRef = useRef();
-  // const sideBarRef = useRef(null);
-  // const [isResizing, setIsResizing] = useState(false);
-  // const handleMouseDown = () =>{
-  //   setIsResizing(true);
-  //   document.body.style.cursor = "col-resize";
-  //   document.addEventListener("mousemove", handleMouseMove);
-  //   document.addEventListener("mouseup", handleMouseUp);
-  // };
+  const offcanvasRef = useRef(null);
 
-  // const handleMouseMove = (e) =>{
-  //     if(!isResizing) return;
-  //     const sidebarLeft = sideBarRef.current.getBoundingClientRect().left;
-  //     const newWidth = e.clientX - sidebarLeft;
-  //     if(newWidth >= 150 && newWidth <= 500){
-  //       sideBarRef.current.style.width = `${newWidth}px`;
-  //     }
-  // };
-
-  // const handleMouseUp = () =>{
-  //   setIsResizing(false);
-  //   document.body.style.cursor="";
-  //   document.removeEventListener("mousemove", handleMouseMove);
-  //   document.removeEventListener("mouseup", handleMouseUp);
-  // }
   const handleClickLanguage = (heading, idx) => {
     let selectedCode = null;
     let langClass = "";
@@ -83,6 +61,12 @@ function Programs() {
     });
     setCode(null);
     setLanguageClass(""); // Reset language class when no language is selected
+
+
+    if (offcanvasRef.current) {
+      const offcanvas = new window.bootstrap.Offcanvas(offcanvasRef.current);
+      offcanvas.hide();
+    }
   };
 
   function copyToClipboard() {

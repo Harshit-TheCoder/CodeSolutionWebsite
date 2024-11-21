@@ -4,6 +4,8 @@ import Footer from "./components/footer";
 import Main from "./components/main";
 import logo from "./components/codingwebsitelogo.png";
 import GIF from "./components/codinggif.gif";
+import "./css/home.css";
+import "./css/index.css";
 function Home() {
     
   
@@ -14,16 +16,17 @@ function Home() {
           <Main>
             <div className="container">
               <div className="row">
-                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                  <div style={{display:"flex", flexDirection:"column", gap:"3px"}}>
+                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" style={{display:"flex", flexDirection:"column", gap:"3px", alignItems:"center", justifyContent:"center"}}>
+                {/* style={{display:"flex", flexDirection:"column", gap:"3px"}} */}
+                  <div >
                       <center>
-                        <img src={logo} alt="coding website logo" height="500px"/> 
+                        <img className="website_logo" src={logo} alt="coding website logo" height="500px"/> 
                       </center> 
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <center>
-                  <img alt="Coder GIF" height="350px" width="350px" src={GIF} />
+                  <img className="coder_image" alt="Coder GIF" height="350px" width="350px" src={GIF} />
                   </center>
                 </div>
               </div>

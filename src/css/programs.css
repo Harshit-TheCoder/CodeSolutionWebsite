@@ -65,7 +65,7 @@
     resize: horizontal;
     border-right: 2px solid #ccc;
     /* background-color: #13001f; */
-    background-color: rgb(38, 63, 87);
+    /* background-color: rgb(38, 63, 87); */
 }
 
 
@@ -109,12 +109,11 @@
     background-color: #20282c;
     /* color: #06e6ff; */
     color: white;
+    cursor: pointer;
     /* color: greenyellow; */
     /* border: 1px solid white; */
 }
-.question-locator ol .question-locator-div li :hover{
-    cursor: pointer;
-}
+
 
 .question-locator-bar ol .question-locator-div-bar li{
     text-decoration: none;
@@ -125,13 +124,12 @@
     border-radius: 50px;
     background-color: #20282c;
     /* color: #06e6ff; */
+    cursor:pointer;
     color: white;
     /* color: greenyellow; */
     /* border: 1px solid white; */
 }
-.question-locator-bar ol .question-locator-div-bar li :hover{
-    cursor: pointer;
-}
+
 
 @media (min-width: 992px){
     .question-button{
@@ -166,4 +164,7 @@
     }
 }
 
+.language-locator li{
+    cursor: pointer;
+}
 
