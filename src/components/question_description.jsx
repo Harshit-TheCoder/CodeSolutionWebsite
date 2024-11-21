@@ -23,8 +23,19 @@ const questions = {
                     for integers.`,
     "Quick Sort":`Develop a Program to sort a given one dimensional array with Quick Sort logic. The logic should be applicable only
                     for integers.`,
-    "Linked List Insertion":`Given a linked list and an integer value val, insert a new node with that value at the beginning (before the head) of the list and return the updated linked list.
-    `,
+    "Linked List":`Complete Linked List Implementation`,
+    "Doubly Linked List":`Complete Doubly Linked List Implementation`,
+    "Circular Linked List":`Complete Circular Linked List Implementation`,
+    "Linked List Addition":`Perform addition to two algebraic polynomials using linked list concept`,
+    "Linked List Multiplication":`Perform Multiplication to two algebraic polynomials using linked list concept`,
+
+    "Stack from Array":`Implement Stack data structure using array`,
+    "Stack from Linked List":`Implement Stack data structure using Linked List`,
+    "Queue from Array":`Implement Queue data structure using array`,
+    "Queue from Linked List":`Implement Queue data structure using Linked List`,
+    "Infix to Postfix":`Convert Infix expression to Postfix expression using Stack data structure`,
+    "Postfix Evaluate":`Evaluate postfix expression using Stack Data structure`,
+    "Balanced Parenthesis":`Check whether string expression is a balanced parenthesis or not`,
 };
 
 export default questions;

@@ -160,6 +160,8 @@
     .program-question-solution pre {
         max-width: 100%; /* Ensure the code block adapts to the container */
         overflow-x: scroll;
+        overflow-y: scroll;
+        height: 600px;
         padding: 1px;margin: 0;
     }
 }

@@ -14,13 +14,19 @@ const headings= [
    
   "Quick Sort",
   
-    "Linked List Insertion",
-    "Linked List Deletion",
-    "Linked List Searching",
+    "Linked List",
     "Doubly Linked List",
-    "Doubly Linked List",
-    "Doubly Linked List",
-    "Doubly Linked List",
+    "Circular Linked List",
+    "Linked List Addition",
+    "Linked List Multiplication",
+
+    "Stack from Array",
+    "Stack from Linked List",
+    "Queue from Array",
+    "Queue from Linked List",
+    "Infix to Postfix",
+    "Postfix Evaluate",
+    "Balanced Parenthesis",
     "Upcoming",
     "Upcoming",
     
