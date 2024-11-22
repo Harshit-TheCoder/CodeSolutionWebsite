@@ -22,8 +22,6 @@ import cppLogo from './components/skills/CPP.png';
 import javaLogo from './components/skills/Java.png';
 import pythonLogo from './components/skills/Python.png';
 import categories from "./components/categories.jsx";
-import Sidebar from "./components/Sidebar.jsx";
-// import MarkdownRenderer from "./components/MarkdownRenderer.jsx";
 
 
 function Programs() {
@@ -56,18 +54,6 @@ function Programs() {
     setCode(selectedCode);
     setLanguageClass(langClass);
   };
-  const [selectedFile, setSelectedFile] = useState("");
-
-  const handleSelect = (filePath, heading) => {
-    setSelectedFile(filePath);
-    setSelectedQuestion({
-      heading: heading,
-      description: questions[heading],
-    });
-    setCode(null);
-    setLanguageClass("");
-  };
-
 
   const handleClick = (heading) => {
     setSelectedQuestion({
@@ -110,14 +96,21 @@ function Programs() {
         {/* <div className="container">
           <div className="row container-div"> */}
           <div style={{display:"flex", flexDirection:"row", }}>
-            <div className="question-locator">
-            <center>
+            <div  className="question-locator">
+              <center>
                 <h3 style={{ color: "#1560bd", fontFamily: "serif", fontWeight: "1000" }}>
-                    Questions
+                  Questions
                 </h3>
-            </center>
-              <Sidebar categories={categories} onSelect={handleSelect}></Sidebar></div>
-            
+              </center>
+              <ol>
+                {headings.map((heading, index) => (
+                  <div className="question-locator-div" key={index}>
+                    <li onClick={() => handleClick(heading)}>{heading}</li>
+                  </div>
+                ))}
+              </ol>
+              
+            </div>
             {/* <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px"}}>
                 Questions
             </button> */}
@@ -128,8 +121,21 @@ function Programs() {
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                  <div className="question-locator-bar col-12"><Sidebar categories={categories} onSelect={handleSelect}></Sidebar></div>
-                    
+                    <div className="col-12 question-locator-bar">
+                        <center>
+                            <h3 style={{ color: "#1560bd", fontFamily: "serif", fontWeight: "1000" }}>
+                            Questions
+                            </h3>
+                        </center>
+                        <ol>
+                            {headings.map((heading, index) => (
+                            <div className="question-locator-div-bar" key={index}>
+                                <li onClick={() => handleClick(heading)}>{heading}</li>
+                            </div>
+                            ))}
+                        </ol>
+
+                    </div>
                 </div>
             </div>
             <div className="program-container">
