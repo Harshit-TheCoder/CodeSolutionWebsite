@@ -1,10 +1,6 @@
-# Selection Sort
-Develop a Program to sort a given one dimensional array with Selection Sort logic. The logic should be applicable only for integers.
 
-## Solutions
 ### C
 ```
-c
     #include <stdio.h>
     void selectionSort(int arr[], int n) {
         for (int i = 0; i < n - 1; ++i) {
@@ -30,8 +26,7 @@ c
 ```
 
 ### CPP
-``` 
-cpp
+```
     #include <iostream>
     #include <vector>
     using namespace std;

@@ -1,11 +1,6 @@
-# Binary Search
-Develop a Program to create a SORTED array with 'n' elements. Take an element from user element as input.
-Search for the element in the array using Binary Search Technique. Display the index if search is successful else display "Search Unsuccessful"
 
-## Solutions
 ### C
 ```
-c
     #include <stdio.h>
 
     int binarySearch(int arr[], int size, int key) {
@@ -37,7 +32,6 @@ c
 
 ### CPP
 ```
-cpp
     #include <iostream>
     #include <vector>
     using namespace std;

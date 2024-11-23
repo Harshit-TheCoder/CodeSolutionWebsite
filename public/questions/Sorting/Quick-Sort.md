@@ -1,10 +1,6 @@
-# Quick Sort
-Develop a Program to sort a given one dimensional array with Quick Sort logic. The logic should be applicable only for integers.
 
-## Solutions
 ### C
 ```
-c
     #include <stdio.h>
 
     int partition(int arr[], int low, int high) {
@@ -45,7 +41,6 @@ c
 
 ### CPP
 ```
-cpp
     #include <iostream>
     #include <vector>
     using namespace std;

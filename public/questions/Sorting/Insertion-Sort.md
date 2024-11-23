@@ -1,10 +1,8 @@
-# Insertion Sort
-Develop a Program to sort a given one dimensional array with Insertion Sort logic. The logic should be applicable only for integers.
 
-## Solutions
+
+
 ### C
 ```
-c
 #include <stdio.h>
 void insertionSort(int arr[], int n) {
     for (int i = 1; i < n; ++i) {

@@ -1,10 +1,6 @@
-# Linear Search
-Develop a Program to create an array(Sorted/Unsorted) with 'n' elements. Take an element from user element as input.Search for the element in the array using Linear Search Technique. Display the index if search is successful else display "Search Unsuccessful"
 
-## Solutions
 ### C
 ```
-c
     #include <iostream>
     #include <vector>
     using namespace std;
@@ -29,7 +25,6 @@ c
 
 ### CPP
 ```
-cpp
     #include <iostream>
     #include <vector>
     using namespace std;

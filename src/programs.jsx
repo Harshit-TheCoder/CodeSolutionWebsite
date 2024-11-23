@@ -23,6 +23,9 @@ import javaLogo from './components/skills/Java.png';
 import pythonLogo from './components/skills/Python.png';
 import categories from "./components/categories.jsx";
 import Sidebar from "./components/Sidebar.jsx";
+import ReactMarkdown from "react-markdown";
+// import Arrays from "./components/questions/Arrays"
+// import questions from "../public/questions"
 // import MarkdownRenderer from "./components/MarkdownRenderer.jsx";
 
 
@@ -34,38 +37,116 @@ function Programs() {
   const [languageClass, setLanguageClass] = useState(""); // To store the dynamic class for Prism.js
   const codeRef = useRef();
   const offcanvasRef = useRef(null);
+  const [selectedFile, setSelectedFile] = useState("");
 
+  // const getMarkdownContent = (heading, algorithm, language) => {
+  //   const context = require.context("./components/questions", true, /\.md$/);
+  //   const filePath = `./${heading}/${algorithm}-${language}.md`;
+  //   const markdownFile = context(filePath);
+  //   return markdownFile.default || markdownFile;
+  // };
+
+  const extractCodeForLanguage = (content, language) => {
+    if (!content) {
+      return "Content not found!";
+    }
+  
+    const regex = new RegExp(
+      `###\\s*${language}\\s*\\n([\\s\\S]*?)(?=\\n###|$)`,
+      "g"
+    );
+  
+    const match = regex.exec(content);
+    if (match) {
+      // Remove backticks and trim any unnecessary whitespace
+      // console.log(match[1]);
+      return match[1];
+    }
+  
+    return `Code block not found for the selected language ${language}!`;
+  };
   const handleClickLanguage = (heading, idx) => {
     let selectedCode = null;
     let langClass = "";
+    // console.log(selectedFile);
+    // let languageFilePath = "";
+    // if (idx === 0) {
+    //   selectedCode = c[heading];
+    //   langClass = "language-c";
+    //   languageFilePath = getMarkdownContent(heading, algorithm, "C");
+    // } else if (idx === 1) {
+    //   selectedCode = cpp[heading];
+    //   langClass = "language-cpp";
+    //   languageFilePath = getMarkdownContent(heading, algorithm, "CPP");
+    // } else if (idx === 2) {
+    //   selectedCode = java[heading];
+    //   langClass = "language-java";
+    //   languageFilePath = getMarkdownContent(heading, algorithm, "Java");
+    // } else if (idx === 3) {
+    //   selectedCode = python[heading];
+    //   langClass = "language-python";
+    //   languageFilePath = getMarkdownContent(heading, algorithm, "Python");
+    // }
 
     if (idx === 0) {
-      selectedCode = c[heading];
       langClass = "language-c";
+      selectedCode = extractCodeForLanguage(selectedFile, "C");
     } else if (idx === 1) {
-      selectedCode = cpp[heading];
       langClass = "language-cpp";
+      selectedCode = extractCodeForLanguage(selectedFile, "CPP");
     } else if (idx === 2) {
-      selectedCode = java[heading];
       langClass = "language-java";
+      selectedCode = extractCodeForLanguage(selectedFile, "Java");
     } else if (idx === 3) {
-      selectedCode = python[heading];
       langClass = "language-python";
+      selectedCode = extractCodeForLanguage(selectedFile, "Python");
     }
 
     setCode(selectedCode);
+    console.log(code);
     setLanguageClass(langClass);
   };
-  const [selectedFile, setSelectedFile] = useState("");
+  
 
   const handleSelect = (filePath, heading) => {
-    setSelectedFile(filePath);
+    let program="";
+    // fetch(filePath)
+    // .then((response) => response.text())
+    // .then((content) => {
+    //   program=content;
+    //   setSelectedFile(content); // Store file content
+    //   setSelectedQuestion({
+    //     heading: heading,
+    //     description: questions[heading],
+    //   });
+    // })
+    // .catch((error) => console.error("Error reading file:", error));
+    fetch(filePath)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then((content) => {
+      console.log(content); // Logs the file content
+      setSelectedFile(content);
+    })
+    .catch((error) => console.error('Error:', error));
+    // console.log(program);
+    console.log(filePath);
     setSelectedQuestion({
       heading: heading,
       description: questions[heading],
     });
     setCode(null);
     setLanguageClass("");
+
+    if (offcanvasRef.current) {
+      const offcanvas = new window.bootstrap.Offcanvas(offcanvasRef.current);
+      offcanvas.hide(); // Hide the sidebar
+    }
+    // document.querySelector(".sidebar-button").setAttribute("data-bs-dismiss","offcanvas");
   };
 
 
@@ -122,10 +203,11 @@ function Programs() {
                 Questions
             </button> */}
 
-                <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div class="sidebar offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel" ref={offcanvasRef}>
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    {/* data-bs-dismiss="offcanvas" */}
+                    <button className="sidebar-button" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                   <div className="question-locator-bar col-12"><Sidebar categories={categories} onSelect={handleSelect}></Sidebar></div>
