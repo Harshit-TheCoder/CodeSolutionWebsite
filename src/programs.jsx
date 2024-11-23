@@ -24,6 +24,7 @@ import pythonLogo from './components/skills/Python.png';
 import categories from "./components/categories.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import ReactMarkdown from "react-markdown";
+import websitelogo from "./components/codingwebsitelogo.png";
 // import Arrays from "./components/questions/Arrays"
 // import questions from "../public/questions"
 // import MarkdownRenderer from "./components/MarkdownRenderer.jsx";
@@ -193,6 +194,8 @@ function Programs() {
           <div style={{display:"flex", flexDirection:"row", }}>
             <div className="question-locator">
             <center>
+                
+                <img src={websitelogo} alt="" height="250px" />
                 <h3 style={{ color: "#1560bd", fontFamily: "serif", fontWeight: "1000" }}>
                     Questions
                 </h3>
@@ -203,14 +206,17 @@ function Programs() {
                 Questions
             </button> */}
 
-                <div class="sidebar offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel" ref={offcanvasRef}>
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+                <div class="sidebar offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header" style={{backgroundColor:"rgb(0,0,0,0.9)", color:"white", border:"1px solid magenta"}}>
+                    <h5 class="offcanvas-title" id="staticBackdropLabel">Questions:</h5>
                     {/* data-bs-dismiss="offcanvas" */}
-                    <button className="sidebar-button" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button className="sidebar-button" type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                  <div className="question-locator-bar col-12"><Sidebar categories={categories} onSelect={handleSelect}></Sidebar></div>
+                <div class="offcanvas-body" style={{backgroundColor:"rgb(0,0,0,0.9)"}}>
+                  <div className="question-locator-bar col-12" >
+                    <center><img src={websitelogo} alt="" height="250px" /></center>
+                    <Sidebar categories={categories} onSelect={handleSelect}></Sidebar>
+                    </div>
                     
                 </div>
             </div>
