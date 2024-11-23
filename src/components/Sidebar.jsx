@@ -10,9 +10,10 @@ const Sidebar = ({ categories, onSelect }) => {
                     <div key={category.name} className="btn-group my-2">
                         <button
                             type="button"
-                            className="btn btn-primary dropdown-toggle"
+                            className="btn btn-success dropdown-toggle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
+                            style={{fontSize:"20px", borderRadius:"40px", height:"35px", width:"200px"}}
                         >
                             {category.name}
                         </button>
