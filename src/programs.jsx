@@ -210,7 +210,7 @@ function Programs() {
                 <div class="offcanvas-header" style={{backgroundColor:"rgb(0,0,0,0.9)", color:"white", border:"1px solid magenta"}}>
                     <h5 class="offcanvas-title" id="staticBackdropLabel">Questions:</h5>
                     {/* data-bs-dismiss="offcanvas" */}
-                    <button className="sidebar-button" type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button className="sidebar-button" type="button" class="btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body" style={{backgroundColor:"rgb(0,0,0,0.9)"}}>
                   <div className="question-locator-bar col-12" >
