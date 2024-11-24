@@ -20,7 +20,7 @@ const Sidebar = ({ categories, onSelect }) => {
                         <ul className="dropdown-menu">
                             {category.questions.map((question) => (
                                 <li key={question}>
-                                    <a className="dropdown-item" href="#" onClick={() => onSelect(category.path + question, question.replace(".md", "").replace(/-/g, " "))}>
+                                    <a className="dropdown-item" href="#" data-bs-dismiss="offcanvas" onClick={() => onSelect(category.path + question, question.replace(".md", "").replace(/-/g, " "))}>
                                         {question.replace(".md", "").replace(/-/g, " ")}
                                     </a>
                                 </li>

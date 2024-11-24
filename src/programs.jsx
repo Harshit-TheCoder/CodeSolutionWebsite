@@ -107,21 +107,10 @@ function Programs() {
     console.log(code);
     setLanguageClass(langClass);
   };
-  
-
+ 
   const handleSelect = (filePath, heading) => {
     let program="";
-    // fetch(filePath)
-    // .then((response) => response.text())
-    // .then((content) => {
-    //   program=content;
-    //   setSelectedFile(content); // Store file content
-    //   setSelectedQuestion({
-    //     heading: heading,
-    //     description: questions[heading],
-    //   });
-    // })
-    // .catch((error) => console.error("Error reading file:", error));
+    
     fetch(filePath)
     .then((response) => {
       if (!response.ok) {
@@ -143,28 +132,10 @@ function Programs() {
     setCode(null);
     setLanguageClass("");
 
-    if (offcanvasRef.current) {
-      const offcanvas = new window.bootstrap.Offcanvas(offcanvasRef.current);
-      offcanvas.hide(); // Hide the sidebar
-    }
-    // document.querySelector(".sidebar-button").setAttribute("data-bs-dismiss","offcanvas");
   };
 
 
-  const handleClick = (heading) => {
-    setSelectedQuestion({
-      heading: heading,
-      description: questions[heading],
-    });
-    setCode(null);
-    setLanguageClass(""); // Reset language class when no language is selected
-
-
-    if (offcanvasRef.current) {
-      const offcanvas = new window.bootstrap.Offcanvas(offcanvasRef.current);
-      offcanvas.hide();
-    }
-  };
+  
 
   function copyToClipboard() {
     const content = document.getElementById("code").innerText;
@@ -206,7 +177,7 @@ function Programs() {
                 Questions
             </button> */}
 
-                <div class="sidebar offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div  className={`offcanvas offcanvas-start `} data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
                 <div class="offcanvas-header" style={{backgroundColor:"rgb(0,0,0,0.9)", color:"white", border:"1px solid magenta"}}>
                     <h5 class="offcanvas-title" id="staticBackdropLabel">Questions:</h5>
                     {/* data-bs-dismiss="offcanvas" */}
