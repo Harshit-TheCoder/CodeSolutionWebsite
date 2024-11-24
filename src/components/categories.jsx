@@ -16,9 +16,24 @@ const categories = [
         questions: ["Insertion-in-Array.md", "Deletion-in-Array.md", "Merging-of-two-arrays.md"]
     },
     {
+        name: "Strings",
+        path: "/questions/Strings/",
+        questions: [] 
+    },
+    {
         name: "Linked Lists",
         path: "/questions/Linked_Lists/",
         questions: ["Linked-List.md", "Doubly-Linked-List.md", "Circular-Linked-List.md","Linked-List-Addition.md","Linked-List-Multiplication.md" ] 
+    },
+    {
+        name: "Recursion",
+        path: "/questions/Recursion/",
+        questions: [] 
+    },
+    {
+        name: "Bit Manipulation",
+        path: "/questions/Bit_Manipulation/",
+        questions: [] 
     },
     {
         name: "Stacks",
@@ -29,7 +44,47 @@ const categories = [
         name: "Queues",
         path: "/questions/Queues/",
         questions: ["Queue-from-Array.md","Queue-from-Linked-List.md",] 
-    }
+    },
+    {
+        name: "Heaps",
+        path: "/questions/Heaps/",
+        questions: [] 
+    },
+    {
+        name: "Sliding Window",
+        path: "/questions/Sliding_Window/",
+        questions: [] 
+    },
+    {
+        name: "Greedy Algorithms",
+        path: "/questions/Greedy_Algorithms/",
+        questions: [] 
+    },
+    {
+        name: "Binary Trees",
+        path: "/questions/Binary_Trees/",
+        questions: [] 
+    },
+    {
+        name: "Binary Search Trees",
+        path: "/questions/Binary_Search_Trees/",
+        questions: [] 
+    },
+    {
+        name: "Graphs",
+        path: "/questions/Graphs/",
+        questions: [] 
+    },
+    {
+        name: "Dynamic Programming",
+        path: "/questions/Dynamic_Programming/",
+        questions: [] 
+    },
+    {
+        name: "Tries",
+        path: "/questions/Tries/",
+        questions: [] 
+    },
 ];
 
 export default categories;
