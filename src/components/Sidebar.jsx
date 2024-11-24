@@ -7,13 +7,13 @@ const Sidebar = ({ categories, onSelect }) => {
             
             <div style={{display:"flex", flexDirection:"column"}}>
                 {categories.map((category) => (
-                    <div key={category.name} className="btn-group my-2">
+                    <div key={category.name} className="btn-group my-0">
                         <button
                             type="button"
-                            className="btn btn-success dropdown-toggle"
+                            className="btn  dropdown-toggle"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
-                            style={{fontSize:"20px", borderRadius:"40px", height:"35px", width:"200px"}}
+                            style={{fontSize:"20px", height:"40px", width:"100%", color:"white", borderBottom:"1px solid white"}}
                         >
                             {category.name}
                         </button>

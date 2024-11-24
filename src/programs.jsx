@@ -195,7 +195,7 @@ function Programs() {
             <div className="question-locator">
             <center>
                 
-                <img src={websitelogo} alt="" height="250px" />
+                {/* <img src={websitelogo} alt="" height="250px" /> */}
                 <h3 style={{ color: "#1560bd", fontFamily: "serif", fontWeight: "1000" }}>
                     Questions
                 </h3>

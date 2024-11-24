@@ -29,7 +29,7 @@
     /* border: 1px solid green; */
 }
 .program-question-solution{
-    height: 650px;
+    height: 600px;
     position: relative;
 }
 .copy-button{
@@ -80,8 +80,10 @@
     height: 550px;
     text-align: center;
     overflow-y: scroll;
-    scrollbar-width: none; /*Remove scrollbar width */
-    scrollbar-color:transparent transparent; /*Make scrollbar invisible*/
+    /* scrollbar-width: none; */
+     /*Remove scrollbar width
+    /* scrollbar-color:transparent transparent; */
+     /*Make scrollbar invisible*/
     list-style: none;
 }
 .question-locator-bar ol{
