@@ -23,12 +23,12 @@ const categories = [
     {
         name: "Linked Lists",
         path: "/questions/Linked_Lists/",
-        questions: ["Linked-List.md", "Doubly-Linked-List.md", "Circular-Linked-List.md","Linked-List-Addition.md","Linked-List-Multiplication.md" ] 
+        questions: ["Linked-List.md", "Doubly-Linked-List.md", "Circular-Linked-List.md","Linked-List-Addition.md","Linked-List-Multiplication.md", "Josephus-Circle.md" ] 
     },
     {
         name: "Recursion",
         path: "/questions/Recursion/",
-        questions: [] 
+        questions: ["Tower-of-Hanoi.md"] 
     },
     {
         name: "Bit Manipulation",
@@ -68,7 +68,7 @@ const categories = [
     {
         name: "Binary Search Trees",
         path: "/questions/Binary_Search_Trees/",
-        questions: [] 
+        questions: ["Binary-Search-Tree.md"] 
     },
     {
         name: "Graphs",
