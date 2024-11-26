@@ -13,7 +13,7 @@ const categories = [
     {
         name: "Arrays",
         path: "/questions/Arrays/",
-        questions: ["Insertion-in-Array.md", "Deletion-in-Array.md", "Merging-of-two-arrays.md","Sparse-Matrix-Transpose.md", "Sparse-Matrix.md", "Sparse-Matrix-Addiion.md", "Sparse-Matrix-Multiplication.md", "Matrix-Multiplication.md", "Pascals-Triangle.md"]
+        questions: ["Insertion-in-Array.md", "Deletion-in-Array.md", "Merging-of-two-arrays.md","Sparse-Matrix-Transpose.md", "Sparse-Matrix.md", "Sparse-Matrix-Addition.md", "Sparse-Matrix-Multiplication.md", "Matrix-Multiplication.md", "Pascals-Triangle.md"]
     },
     {
         name: "Strings",
@@ -73,7 +73,7 @@ const categories = [
     {
         name: "Graphs",
         path: "/questions/Graphs/",
-        questions: [""] 
+        questions: ["Breadth-First-Search.md", "Depth-First-Search.md", "Topological-Sort-DFS.md", "Topological-Sort-BFS.md", "Dijkstras-Algorithm.md", "Prims-Algorithm.md", "Kruskals-Algorithm.md"] 
     },
     {
         name: "Dynamic Programming",
