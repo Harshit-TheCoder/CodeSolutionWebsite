@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "../css/header.css";
-const Header=({toggleTheme,mode})=>{
+const Header=()=>{
   
       return(
         <nav className={`navbar navbar-expand-lg navbar-dark bg-dark fixed-top z-index-1`} >

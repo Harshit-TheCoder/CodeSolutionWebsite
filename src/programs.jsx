@@ -8,13 +8,15 @@ import "prismjs/components/prism-clike.min.js";
 import "prismjs/components/prism-cpp.min.js";
 import "prismjs/components/prism-java.min.js";
 import "prismjs/components/prism-python.min.js";
+
+
 import Main from "./components/main";
-import headings from "./components/questions";
+// import headings from "./components/questions";
 import questions from "./components/question_description";
-import c from "./components/C_solutions";
-import cpp from "./components/Cpp_solutions";
-import java from "./components/Java_solutions";
-import python from "./components/Python_solutions";
+// import c from "./components/C_solutions";
+// import cpp from "./components/Cpp_solutions";
+// import java from "./components/Java_solutions";
+// import python from "./components/Python_solutions";
 import "./css/programs.css";
 import "./css/index.css";
 import cLogo from './components/skills/C.png';
@@ -23,7 +25,7 @@ import javaLogo from './components/skills/Java.png';
 import pythonLogo from './components/skills/Python.png';
 import categories from "./components/categories.jsx";
 import Sidebar from "./components/Sidebar.jsx";
-import ReactMarkdown from "react-markdown";
+// import ReactMarkdown from "react-markdown";
 import websitelogo from "./components/codingwebsitelogo.png";
 // import Arrays from "./components/questions/Arrays"
 // import questions from "../public/questions"
@@ -37,7 +39,7 @@ function Programs() {
   const [code, setCode] = useState(null);
   const [languageClass, setLanguageClass] = useState(""); // To store the dynamic class for Prism.js
   const codeRef = useRef();
-  const offcanvasRef = useRef(null);
+  
   const [selectedFile, setSelectedFile] = useState("");
 
   // const getMarkdownContent = (heading, algorithm, language) => {
@@ -69,25 +71,7 @@ function Programs() {
   const handleClickLanguage = (heading, idx) => {
     let selectedCode = null;
     let langClass = "";
-    // console.log(selectedFile);
-    // let languageFilePath = "";
-    // if (idx === 0) {
-    //   selectedCode = c[heading];
-    //   langClass = "language-c";
-    //   languageFilePath = getMarkdownContent(heading, algorithm, "C");
-    // } else if (idx === 1) {
-    //   selectedCode = cpp[heading];
-    //   langClass = "language-cpp";
-    //   languageFilePath = getMarkdownContent(heading, algorithm, "CPP");
-    // } else if (idx === 2) {
-    //   selectedCode = java[heading];
-    //   langClass = "language-java";
-    //   languageFilePath = getMarkdownContent(heading, algorithm, "Java");
-    // } else if (idx === 3) {
-    //   selectedCode = python[heading];
-    //   langClass = "language-python";
-    //   languageFilePath = getMarkdownContent(heading, algorithm, "Python");
-    // }
+    
 
     if (idx === 0) {
       langClass = "language-c";
@@ -109,7 +93,7 @@ function Programs() {
   };
  
   const handleSelect = (filePath, heading) => {
-    let program="";
+    
     
     fetch(filePath)
     .then((response) => {
@@ -123,7 +107,7 @@ function Programs() {
       setSelectedFile(content);
     })
     .catch((error) => console.error('Error:', error));
-    // console.log(program);
+    
     console.log(filePath);
     setSelectedQuestion({
       heading: heading,
@@ -151,13 +135,13 @@ function Programs() {
 
   useEffect(() => {
     // Apply syntax highlighting after the code changes
-    if (codeRef.current) {
+    if (codeRef.current && code) {
       Prism.highlightElement(codeRef.current);
     }
   }, [code]);
 
   return (
-    <body>
+    <div>
       <Header />
       <Main>
         {/* <div className="container">
@@ -173,17 +157,17 @@ function Programs() {
             </center>
               <Sidebar categories={categories} onSelect={handleSelect}></Sidebar></div>
             
-            {/* <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px"}}>
+            {/* <button className="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px"}}>
                 Questions
             </button> */}
 
-                <div  className={`offcanvas offcanvas-start `} data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-                <div class="offcanvas-header" style={{backgroundColor:"rgb(0,0,0,0.9)", color:"white", border:"1px solid magenta"}}>
-                    <h5 class="offcanvas-title" id="staticBackdropLabel">Questions:</h5>
+                <div  className="offcanvas offcanvas-start" data-bs-backdrop="static" tabIndex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div className="offcanvas-header" style={{backgroundColor:"rgb(0,0,0,0.9)", color:"white", border:"1px solid magenta"}}>
+                    <h5 className="offcanvas-title" id="staticBackdropLabel">Questions:</h5>
                     {/* data-bs-dismiss="offcanvas" */}
-                    <button className="sidebar-button" type="button" class="btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button className="sidebar-button btn-close-white" type="button"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body" style={{backgroundColor:"rgb(0,0,0,0.9)"}}>
+                <div className="offcanvas-body" style={{backgroundColor:"rgb(0,0,0,0.9)"}}>
                   <div className="question-locator-bar col-12" >
                     <center><img src={websitelogo} alt="" height="250px" /></center>
                     <Sidebar categories={categories} onSelect={handleSelect}></Sidebar>
@@ -194,7 +178,7 @@ function Programs() {
             <div className="program-container">
               <nav className="navbar navbar-dark navbar-expand-lg bg-transparent z-index-4 ">
                 <div className="container-fluid" style={{display:"flex", flexDirection:"row", gap:"3px"}}>
-                    <button class="btn btn-success question-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px", height:"40px"}}>
+                    <button className="btn btn-success question-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px", height:"40px"}}>
                         Questions
                     </button>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -256,7 +240,7 @@ function Programs() {
         {/* </div> */}
       </Main>
       {/* <script src="programs.js" ></script> */}
-    </body>
+    </div>
   );
 }
 

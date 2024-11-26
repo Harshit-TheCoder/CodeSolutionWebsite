@@ -1,6 +1,6 @@
 import React from "react";
 import Header  from "./components/header";
-import Footer from "./components/footer";
+// import Footer from "./components/footer";
 import Main from "./components/main";
 import logo from "./components/codingwebsitelogo.png";
 import GIF from "./components/codinggif.gif";

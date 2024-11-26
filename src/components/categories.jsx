@@ -13,12 +13,12 @@ const categories = [
     {
         name: "Arrays",
         path: "/questions/Arrays/",
-        questions: ["Insertion-in-Array.md", "Deletion-in-Array.md", "Merging-of-two-arrays.md","Sparse-Matrix-Transpose.md", "Sparse-Matrix.md", "Sparse-Matrix-Addiion.md", "Sparse-Matrix-Multiplication.md", "Matrix-Multiplication.md"]
+        questions: ["Insertion-in-Array.md", "Deletion-in-Array.md", "Merging-of-two-arrays.md","Sparse-Matrix-Transpose.md", "Sparse-Matrix.md", "Sparse-Matrix-Addiion.md", "Sparse-Matrix-Multiplication.md", "Matrix-Multiplication.md", "Pascals-Triangle.md"]
     },
     {
         name: "Strings",
         path: "/questions/Strings/",
-        questions: [] 
+        questions: [""] 
     },
     {
         name: "Linked Lists",
@@ -33,7 +33,7 @@ const categories = [
     {
         name: "Bit Manipulation",
         path: "/questions/Bit_Manipulation/",
-        questions: [] 
+        questions: [""] 
     },
     {
         name: "Stacks",
@@ -48,22 +48,22 @@ const categories = [
     {
         name: "Heaps",
         path: "/questions/Heaps/",
-        questions: [] 
+        questions: [""] 
     },
     {
         name: "Sliding Window",
         path: "/questions/Sliding_Window/",
-        questions: [] 
+        questions: [""] 
     },
     {
         name: "Greedy Algorithms",
         path: "/questions/Greedy_Algorithms/",
-        questions: [] 
+        questions: [""] 
     },
     {
         name: "Binary Trees",
         path: "/questions/Binary_Trees/",
-        questions: [] 
+        questions: [""] 
     },
     {
         name: "Binary Search Trees",
@@ -73,17 +73,22 @@ const categories = [
     {
         name: "Graphs",
         path: "/questions/Graphs/",
-        questions: [] 
+        questions: [""] 
     },
     {
         name: "Dynamic Programming",
         path: "/questions/Dynamic_Programming/",
-        questions: [] 
+        questions: [""] 
     },
     {
         name: "Tries",
         path: "/questions/Tries/",
-        questions: [] 
+        questions: [""] 
+    },
+    {
+        name: "Operating System",
+        path: "/questions/Operating_System/",
+        questions: ["First-Fit.md","Best-Fit.md", "Worst-Fit.md", "First-In-First-Out.md","Least-Frequently-Used.md", "Least-Recently-Used.md","Sequential-File-Allocation.md", "Indexed-File-Allocation.md", ] 
     },
 ];
 
