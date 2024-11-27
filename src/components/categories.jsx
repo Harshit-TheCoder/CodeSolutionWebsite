@@ -63,7 +63,7 @@ const categories = [
     {
         name: "Binary Trees",
         path: "/questions/Binary_Trees/",
-        questions: [""] 
+        questions: ["Binary-Trees.md", "Preorder-Traversal.md", "Inorder-Traversal.md", "Postorder-Traversal.md"] 
     },
     {
         name: "Binary Search Trees",
@@ -73,7 +73,7 @@ const categories = [
     {
         name: "Graphs",
         path: "/questions/Graphs/",
-        questions: ["Breadth-First-Search.md", "Depth-First-Search.md", "Topological-Sort-DFS.md", "Topological-Sort-BFS.md", "Dijkstras-Algorithm.md", "Prims-Algorithm.md", "Kruskals-Algorithm.md"] 
+        questions: ["Breadth-First-Search.md", "Depth-First-Search.md", "Topological-Sort-DFS.md", "Topological-Sort-BFS.md", "Dijkstras-Algorithm.md", "Prims-Algorithm.md", "Kruskals-Algorithm.md", "Bridges-in-Graph.md", "Articulation-Point.md", "Kosaraju-Algorithm.md"] 
     },
     {
         name: "Dynamic Programming",

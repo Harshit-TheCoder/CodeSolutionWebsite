@@ -53,7 +53,7 @@ bool balancedParenthesis(char* pattern){
     for(int i=0;i<s;i++){
         char c = pattern[i];
         char t = (isEmpty() == 1)?'\0':stack[top];
-        if(top == -1 && (c == '(' || c == '{' || c == '[')) push(c);
+        if((c == '(' || c == '{' || c == '[')) push(c);
         else{
             if(isEmpty() == 0 && ((c == ')' && t == '(') || (c == '}' && t == '{') || (c == ']' && t == '['))){
                 pop();

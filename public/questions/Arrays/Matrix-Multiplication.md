@@ -60,7 +60,7 @@ int main(){
     }
 
     for(int i=0;i<rowsA;i++){
-        for(int j=0;j<rowsB;j++){
+        for(int j=0;j<colsB;j++){
             result[i][j]=0;
             for(int k=0;k<colsA;k++){
                 result[i][j]+= A[i][k] * B[k][j];
