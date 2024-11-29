@@ -41,7 +41,7 @@ function Home() {
                   </div>
                   <center><h5 style={{color:"white", fontFamily:"serif", marginTop:"100px"}}>How it Works?</h5></center>
                   <div className="guide-container">
-                    <div className="guide">
+                    <div className="guide" style={{backgroundColor:"rgba(21, 0, 64, 0.7)"}}>
                       <h5>Create Account</h5>
                         <p>
                         AlgoVault allows you to upload your
@@ -50,7 +50,7 @@ function Home() {
                         generate a username.
                         </p>
                     </div>
-                    <div className="guide">
+                    <div className="guide" style={{backgroundColor:"rgba(21, 0, 64, 0.7)"}}>
                         <h5>Upload Programs</h5>
                         <p>
                          Upload programs in pdf format.
@@ -59,7 +59,7 @@ function Home() {
                          if required in notes tab.
                         </p>
                     </div>
-                    <div className="guide">
+                    <div className="guide" style={{backgroundColor:"rgba(21, 0, 64, 0.7)"}}>
                         <h5>An AI-Powered Chatbot</h5>
                         <p>
                           U can take help of an AI powered Chatbot
@@ -70,7 +70,7 @@ function Home() {
                   </div>
                   <div className="info-coder-img-div"> 
                     <div className="info-div">
-                      <h4>Made by:</h4>
+                      <h4>About:</h4>
                       <h5>Name: <span>Harshit Harlalka</span></h5>
                       <h5>Institute: <span>SRM Institute of Science and Technology</span></h5>
                       <h5>Role: <span>Web Developer</span></h5>

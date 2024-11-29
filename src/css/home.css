@@ -76,6 +76,9 @@
     .website_logo{
         height:200px;
     }
+    .guide{
+        background-color:rgba(21, 0, 64, 0.7) !important;
+    }
 }
 
 @media (min-width:450px) and (max-width:650px){
