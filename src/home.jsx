@@ -68,7 +68,7 @@ function Home() {
                         </p>
                     </div>
                   </div>
-                  <div className="info-coder-img-div" style={{display:"flex", flexDirection:"row", gap:"5px"}}> 
+                  <div className="info-coder-img-div"> 
                     <div className="info-div">
                       <h4>Made by:</h4>
                       <h5>Name: <span>Harshit Harlalka</span></h5>
