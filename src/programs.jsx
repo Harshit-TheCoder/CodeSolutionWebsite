@@ -182,23 +182,27 @@ function Programs() {
                     <button className="btn btn-success question-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px", height:"40px"}}>
                         Questions
                     </button>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                      <span className="navbar-toggler-icon"></span>
+                    <button className="btn btn-info navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      Language
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarNav1" style={{display:"flex", flexDirection:"column"}}>
-                      <center><h5 style={{color: "green",fontFamily: "Poppins",fontWeight: "800",padding:"3px"}}>Select Language</h5></center>
-                      <ul className="navbar-nav list_items language-locator">
-                        {Programming_Language.map((language, index) => (
-                          <div className="question-locator-div" key={index}>
-                            <li className="nav-item"
-                              onClick={() => handleClickLanguage(selectedQuestion?.heading, index)}>
-                              {/* {language} */}
-                              {/* {<img src={`./components/skills/${language}.png`} alt="" />} */}
-                              <img src={logo[index]} alt={`${language} logo`} />
-                            </li>
-                          </div>
-                        ))}
-                      </ul>
+                    <center><h3 className="language-header" style={{color:"green"}}>Language:</h3></center>
+                    <div className="collapse navbar-collapse" id="navbarNav1">
+                      {/* <div  style={{display:"flex", flexDirection:"column", justifyContent:"space-evenly"}}> */}
+                         
+                        <ul className="navbar-nav list_items language-locator">
+                          {Programming_Language.map((language, index) => (
+                            <div className="question-locator-div" key={index}>
+                              <li className="nav-item"
+                                onClick={() => handleClickLanguage(selectedQuestion?.heading, index)}>
+                                {/* {language} */}
+                                {/* {<img src={`./components/skills/${language}.png`} alt="" />} */}
+                                <img src={logo[index]} alt={`${language} logo`} />
+                              </li>
+                            </div>
+                          ))}
+                        </ul>
+                      {/* </div> */}
+                      
                     </div>
                 </div>
               </nav>

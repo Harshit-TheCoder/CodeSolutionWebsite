@@ -132,6 +132,13 @@
     /* border: 1px solid white; */
 }
 
+.language-header{
+    color: "green";
+    font-family: "Poppins";
+    font-weight: "800";
+    padding:"3px";
+}
+
 
 @media (min-width: 992px){
     .question-button{
@@ -143,11 +150,15 @@
     .program-container{
         width: 85%;
     }
+    
     .program-question-solution pre {
         overflow-y: scroll;height: 550px;font-family: "consolas";padding: "3px";margin: "3px";
     }
 }
 @media (max-width: 992px){
+    .language-header{
+        display: none;
+    }
     .question-button{
         display: block;
     }
