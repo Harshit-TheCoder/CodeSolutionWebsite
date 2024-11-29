@@ -1,3 +1,28 @@
-.list-items{
-    color:green !important;
+/* Set the initial color of the navigation links to white */
+.navbar-nav{
+    
+    gap: 5px !important;
 }
+.navbar-nav .nav-link {
+    color: white !important; /* Override any default styles */
+    transition: transform 0.3s ease, background-color 0.2s ease;
+}
+
+/* Hover effect: Move the link up */
+.navbar-nav .nav-link:hover {
+    transform: translateY(-5px); /* Moves the link up */
+    color: white !important; /* Ensure color remains white */
+}
+
+/* Active state (when clicked) */
+.navbar-nav .nav-link:active {
+    border-radius: 40px;
+    background-color: green; /* Set background to yellow when clicked */
+    color: black !important; /* Change text color to black for better contrast */
+}
+
+/* Optional: Adding spacing or other effects to the buttons */
+.navbar-nav .btn-primary {
+    margin-top: 5px;
+}
+

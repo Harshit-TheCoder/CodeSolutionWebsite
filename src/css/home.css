@@ -3,7 +3,7 @@
     height:350px;
 }
 .website_logo{
-    height:500px;
+    height:200px;
 }
 @media (min-width:650px) and (max-width:912px){
     .coder_image{
@@ -11,7 +11,7 @@
         height:300px;
     }
     .website_logo{
-        height:400px;
+        height:200px;
     }
 }
 
@@ -21,7 +21,10 @@
         height:250px;
     }
     .website_logo{
-        height:250px;
+        height:180px;
+    }
+    .typewriter h3{
+        font-size: 15px;
     }
 }
 @media (max-width: 450px){
@@ -30,6 +33,58 @@
         height:230px;
     }
     .website_logo{
-        height:230px;
+        height:130px;
+    }
+    .typewriter h3{
+        font-size: 15px;
     }
 }
+
+
+
+ .typewriter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    height: 50px;
+}
+.typewriter h3{
+    color:white;
+}
+.typewriter {
+    display: inline-block;
+    height: 30px;
+    font-weight: bold;
+    opacity: 0;
+    white-space: nowrap;
+    border-right: 3px solid transparent;
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+
+    overflow: hidden;
+    margin-bottom: 20px;
+    animation-iteration-count: infinite;
+  }
+
+  
+
+  @keyframes typing {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  } 
+
+   

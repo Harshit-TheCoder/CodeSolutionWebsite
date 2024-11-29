@@ -10,7 +10,7 @@ const Header=()=>{
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav list_items" style={{ color:"green" }}>
+          <ul className="navbar-nav list_items">
             <li className="nav-item" id="1">
               <a className="nav-link list_items" aria-current="page" href="/">Home</a>
             </li>
@@ -33,5 +33,4 @@ const Header=()=>{
       </nav>
     );
 };
-
 export default Header;

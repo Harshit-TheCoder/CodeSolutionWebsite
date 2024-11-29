@@ -25,6 +25,7 @@ import javaLogo from './components/skills/Java.png';
 import pythonLogo from './components/skills/Python.png';
 import categories from "./components/categories.jsx";
 import Sidebar from "./components/Sidebar.jsx";
+import Sidebar2 from "./components/Sidebar2.jsx";
 // import ReactMarkdown from "react-markdown";
 import websitelogo from "./components/codingwebsitelogo.png";
 // import Arrays from "./components/questions/Arrays"
@@ -155,13 +156,13 @@ function Programs() {
                     Questions
                 </h3>
             </center>
-              <Sidebar categories={categories} onSelect={handleSelect}></Sidebar></div>
+              <Sidebar2 categories={categories} onSelect={handleSelect}></Sidebar2></div>
             
             {/* <button className="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px"}}>
                 Questions
             </button> */}
 
-                <div  className="offcanvas offcanvas-start" data-bs-backdrop="static" tabIndex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div  className="offcanvas offcanvas-start"  tabIndex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel" >
                 <div className="offcanvas-header" style={{backgroundColor:"rgb(0,0,0,0.9)", color:"white", border:"1px solid magenta"}}>
                     <h5 className="offcanvas-title" id="staticBackdropLabel">Questions:</h5>
                     {/* data-bs-dismiss="offcanvas" */}
@@ -184,7 +185,8 @@ function Programs() {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarNav1">
+                    <div className="collapse navbar-collapse" id="navbarNav1" style={{display:"flex", flexDirection:"column"}}>
+                      <center><h5 style={{color: "green",fontFamily: "Poppins",fontWeight: "800",padding:"3px"}}>Select Language</h5></center>
                       <ul className="navbar-nav list_items language-locator">
                         {Programming_Language.map((language, index) => (
                           <div className="question-locator-div" key={index}>
@@ -236,10 +238,10 @@ function Programs() {
               </div>
             </div>
           </div>
-          {/* </div> */}
-        {/* </div> */}
+ 
+        
       </Main>
-      {/* <script src="programs.js" ></script> */}
+      
     </div>
   );
 }
