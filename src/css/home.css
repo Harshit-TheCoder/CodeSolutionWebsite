@@ -101,6 +101,9 @@
         align-items: center;
         gap:5px;
     }
+    .guide{
+        background-color:rgba(21, 0, 64, 0.7) !important;
+    }
 }
 @media (max-width: 450px){
     .coder_image{
@@ -123,6 +126,9 @@
         flex-direction: column;
         align-items: center;
         gap:5px;
+    }
+    .guide{
+        background-color:rgba(21, 0, 64, 0.7) !important;
     }
 }
 
