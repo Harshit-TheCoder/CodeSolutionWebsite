@@ -1,4 +1,13 @@
 /* Set the initial color of the navigation links to white */
+.modal {
+    z-index: 1050 !important;
+}
+.modal-body{
+    background-color: rgb();
+}
+.modal-backdrop {
+    z-index: 1040 !important; /* Ensure the backdrop is below the modal */
+}
 .navbar-nav{
     
     gap: 5px !important;

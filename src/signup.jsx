@@ -2,7 +2,7 @@ import React from "react";
 import Header  from "./components/header";
 import Footer from "./components/footer";
 import Main from "./components/main";
-import Form from "./components/form";
+import Form from "./components/signupform";
 
 function SignUp(){
     return(
