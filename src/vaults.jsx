@@ -1,237 +1,229 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import Header from "./components/header";
-import Prism from "prismjs";
-import "prismjs/themes/prism-okaidia.css";
-import "prismjs/components/prism-c.min.js";
-import "prismjs/components/prism-clike.min.js";
-import "prismjs/components/prism-cpp.min.js";
-import "prismjs/components/prism-java.min.js";
-import "prismjs/components/prism-python.min.js";
-
-
 import Main from "./components/main";
-import questions from "./components/question_description";
-
-import "./css/programs.css";
-import "./css/index.css";
-import cLogo from './components/skills/C.png';
-import cppLogo from './components/skills/CPP.png';
-import javaLogo from './components/skills/Java.png';
-import pythonLogo from './components/skills/Python.png';
-import categories from "./components/categories.jsx";
-import Sidebar from "./components/Sidebar.jsx";
-import Sidebar2 from "./components/Sidebar2.jsx";
-import websitelogo from "./components/codingwebsitelogo.png";
-
-
-
-function Vaults() {
-  const logo = [cLogo, cppLogo, javaLogo, pythonLogo];
-  const Programming_Language = ["C", "CPP", "Java", "Python"];
-  const [selectedQuestion, setSelectedQuestion] = useState(null);
-  const [code, setCode] = useState(null);
-  const [languageClass, setLanguageClass] = useState("");
-  const codeRef = useRef();
-  
-  const [selectedFile, setSelectedFile] = useState("");
-
-
-  const extractCodeForLanguage = (content, language) => {
-    if (!content) {
-      return "Content not found!";
-    }
-  
-    const regex = new RegExp(
-      `###\\s*${language}\\s*\\n([\\s\\S]*?)(?=\\n###|$)`,
-      "g"
-    );
-  
-    const match = regex.exec(content);
-    if (match) {
-      return match[1];
-    }
-  
-    return `Code block not found for the selected language ${language}!`;
-  };
-  const handleClickLanguage = (heading, idx) => {
-    let selectedCode = null;
-    let langClass = "";
-    
-
-    if (idx === 0) {
-      langClass = "language-c";
-      selectedCode = extractCodeForLanguage(selectedFile, "C");
-    } else if (idx === 1) {
-      langClass = "language-cpp";
-      selectedCode = extractCodeForLanguage(selectedFile, "CPP");
-    } else if (idx === 2) {
-      langClass = "language-java";
-      selectedCode = extractCodeForLanguage(selectedFile, "Java");
-    } else if (idx === 3) {
-      langClass = "language-python";
-      selectedCode = extractCodeForLanguage(selectedFile, "Python");
-    }
-
-    setCode(selectedCode);
-    console.log(code);
-    setLanguageClass(langClass);
-  };
- 
-  const handleSelect = (filePath, heading) => {
-    
-    
-    fetch(filePath)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then((content) => {
-      console.log(content); // Logs the file content
-      setSelectedFile(content);
-    })
-    .catch((error) => console.error('Error:', error));
-    
-    console.log(filePath);
-    setSelectedQuestion({
-      heading: heading,
-      description: questions[heading],
-    });
-    setCode(null);
-    setLanguageClass("");
-
+import UpdateCode from "./components/updatecode";
+import BookMark from "./components/images/bookmarked.png";
+import NotBookMark from "./components/images/notbookmarked.png";
+import BookmarkedQuestions from "./components/bookmark";
+import Button from '@mui/material/Button';
+import cpp from "./components/images/CPP.png";
+import c from "./components/images/C.png";
+import java from "./components/images/Java.png";
+import python from "./components/images/Python.png";
+import "./css/vault.css";
+const Vaults=()=>{
+  // 
+  const [selectedProgram, setSelectedProgram] = useState(null);
+  const [programs, setPrograms] = useState([]);
+  const navigate = useNavigate();
+  const languageLogos = {
+    cpp: cpp,
+    c: c,
+    java: java,
+    python: python,
   };
 
+  useEffect(()=>{
+    getSavedPrograms();
+  },[]);
 
-  
-
-  function copyToClipboard() {
-    const content = document.getElementById("code").innerText;
-    navigator.clipboard
-      .writeText(content)
-      .then(() => {
-        console.log("Copied to clipboard successfully");
-      })
-      .catch((error) => {
-        console.log("Error while copying to clipboard");
-      });
+  const showProgram = async (id)=>{
+    navigate(`/program/${id}`);
   }
 
-  useEffect(() => {
-    // Apply syntax highlighting after the code changes
-    if (codeRef.current && code) {
-      Prism.highlightElement(codeRef.current);
-    }
-  }, [code]);
+  const getSavedPrograms = async ()=>{
+    const userId = JSON.parse(localStorage.getItem('user'))._id;
+    console.log(userId);
+    let result = await fetch(`http://localhost:5000/vault/${userId}`);
+    result = await result.json();
+    console.log(result);
+    setPrograms(result);
+  }
 
-  return (
+  const deleteProgram= async (e,id)=>{
+      e.stopPropagation();
+      console.log(id);
+      let result = await fetch(`http://localhost:5000/delete_program/${id}`,{
+        method:"Delete",
+      });
+      result = await result.json();
+      if(result){
+        alert('Record is Deleted');
+        setSelectedProgram(null); 
+        getSavedPrograms();
+      }
+  }
+
+  const updateProgram = (e, program)=>{
+      e.stopPropagation();
+      setSelectedProgram(program);
+  }
+
+  const searchProgram = async (event) =>{
+      let key = event.target.value;
+      if(key){
+        let result = await fetch(`http://localhost:5000/search_program/${key}`);
+        result = await result.json();
+        if(result){
+          setPrograms(result);
+          // getSavedPrograms();
+        }
+      }else{
+        getSavedPrograms();
+      }
+  }
+
+  const bookmarkSelectedQuestion = async (e, questionId, userId, programName,programCategory, programLanguage)=>{
+    e.stopPropagation();
+    e.preventDefault();
+    console.log(programName,programCategory,programLanguage, userId, questionId);
+
+     
+    let result = await fetch('http://localhost:5000/bookmark_question',{
+      method:'post',
+      body: JSON.stringify({questionId, userId, programName,programCategory,programLanguage}),
+      headers:{
+        'Content-Type':'application/json',
+      }
+    });
+    result = await result.json();
+    if(result.Message && result.Message === "The selected question is already bookmarked."){
+      alert('Question already bookmarked');
+    }
+    else{
+      alert('Question successfully bookmarked');
+    }
+  }
+
+  const unbookmarkSelectedQuestion = async (e, questionId, userId)=>{
+    e.stopPropagation();
+    e.preventDefault();
+
+    let result = await fetch(`http://localhost:5000/bookmark_question`,{
+      method:'delete',
+      body: JSON.stringify({questionId, userId}),
+      headers:{
+        'Content-Type':'application/json',
+      }
+    });
+    result = await result.json();
+    alert(`${result.Message}`);
+  }
+
+
+  return(
     <div>
       <Header />
       <Main>
-        {/* <div className="container">
-          <div className="row container-div"> */}
-          <div style={{display:"flex", flexDirection:"row", }}>
-            <div className="question-locator">
-            <center>
-                
-                {/* <img src={websitelogo} alt="" height="250px" /> */}
-                <h3 style={{ color: "#1560bd", fontFamily: "serif", fontWeight: "1000" }}>
-                    Questions
-                </h3>
-            </center>
-              <Sidebar2 categories={categories} onSelect={handleSelect}></Sidebar2></div>
-            
-            {/* <button className="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px"}}>
-                Questions
-            </button> */}
-
-                <div  className="offcanvas offcanvas-start"  tabIndex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel" >
-                <div className="offcanvas-header" style={{backgroundColor:"rgb(0,0,0,0.9)", color:"white", border:"1px solid magenta"}}>
-                    <h5 className="offcanvas-title" id="staticBackdropLabel">Questions:</h5>
-                    {/* data-bs-dismiss="offcanvas" */}
-                    <button className="sidebar-button btn-close-white" type="button"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div className="offcanvas-body" style={{backgroundColor:"rgb(0,0,0,0.9)"}}>
-                  <div className="question-locator-bar col-12" >
-                    <center><img src={websitelogo} alt="" height="250px" /></center>
-                    <Sidebar categories={categories} onSelect={handleSelect}></Sidebar>
-                    </div>
-                    
-                </div>
-            </div>
-            <div className="program-container">
-              <nav className="navbar navbar-dark navbar-expand-lg bg-transparent z-index-4 ">
-                <div className="container-fluid" style={{display:"flex", flexDirection:"row", gap:"3px"}}>
-                    <button className="btn btn-success question-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" style={{width:"100px", height:"40px"}}>
-                        Questions
+        <center><h1 className="vault-heading">Vault</h1></center>
+        
+        <div className="container">
+        <h3 className="vault-heading">Your Programs</h3>
+        <div className="row search-div">
+            <input type="text" placeholder="Search Program"
+             className="searchbox"
+             onChange={searchProgram}
+             />
+              <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"
+              onClick={(e)=> e.stopPropagation()}
+              style={{ backgroundColor:"darkgreen", display:"flex",
+                alignItems:"center", justifyContent:"center", padding:"5px", width:"150px", height:"40px",
+                borderRadius:"20px", marginTop:"15px"}}>
+                <span style={{ color: "white", fontFamily:"Poppins"}}>
+                    Bookmark
+                </span>
+              </button>
+        </div>
+        <div className="program-container-div">
+          {
+            programs.length>0 ? programs.map((program, index)=>
+                <div className="row program-div" key={index} onClick={()=>showProgram(program._id)}> 
+                  <div className="col-8">
+                    <h5 className="program-heading">{program.programName}</h5>
+                    <p className="language-topic"> <span className="language">Language:</span>
+                    <img 
+                      src={languageLogos[program.programLanguage]} 
+                      alt={program.programLanguage} 
+                      style={{ width: '30px', height: '30px', marginLeft: '10px' }}
+                    />
+                    <span className="topic">Topic:</span> {program.programCategory} </p>
+                  </div>
+                  <div className="col-4 program-div-buttons">
+                    <button className="btn btn-warning" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#exampleModal" 
+                      onClick={(e)=> updateProgram(e, program)}
+                    >
+                      Update
                     </button>
-                    <button className="btn btn-info navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                      Language
-                    </button>
-                    <center><h3 className="language-header" style={{color:"green"}}>Language:</h3></center>
-                    <div className="collapse navbar-collapse" id="navbarNav1">
-                      {/* <div  style={{display:"flex", flexDirection:"column", justifyContent:"space-evenly"}}> */}
-                         
-                        <ul className="navbar-nav list_items language-locator">
-                          {Programming_Language.map((language, index) => (
-                            <div className="question-locator-div" key={index}>
-                              <li className="nav-item"
-                                onClick={() => handleClickLanguage(selectedQuestion?.heading, index)}>
-                                {/* {language} */}
-                                {/* {<img src={`./components/skills/${language}.png`} alt="" />} */}
-                                <img src={logo[index]} alt={`${language} logo`} />
-                              </li>
-                            </div>
-                          ))}
-                        </ul>
-                      {/* </div> */}
-                      
-                    </div>
-                </div>
-              </nav>
-              <div>
-                <div className="program-question-heading">
-                  {selectedQuestion && (
-                    <>
-                    {/* #ffed00 */}
-                      <h1 style={{color: "green",fontFamily: "Poppins",fontWeight: "800",padding:"3px"}}>
-                        {selectedQuestion.heading}:
-                      </h1>
-                      <p style={{ color: "#ffffff",fontStyle: "italic",fontWeight: "500"}}>
-                        {selectedQuestion.description}
-                      </p>
-                    </>
-                  )}
-                </div>
-                <div>
-                  <div className="program-question-solution">
-                    {selectedQuestion && (
-                      <>
-                      {/* #ffed00 */}
-                        <h4 style={{color: "green",fontFamily: "Poppins",fontWeight: "800",}}>Solution:</h4>
-                        {/* <button className="btn btn-primary" onClick={copyToClipboard} style={{height:"40px", width:"100px"}}>Copy</button> */}
-                        <pre id="code">
-                        <button className="btn btn-warning copy-button" onClick={copyToClipboard} style={{height:"40px", width:"100px"}}>
-                            {/* <img src={copyimg} alt="" style={{ width:"35px", height:"35px"}} /> */}Copy
-                        </button>
-                          <code ref={codeRef} className={languageClass}>
-                            {code}
-                          </code>
-                        </pre>
-                      </>
-                    )}
+                    <button className="btn btn-danger" onClick={(e) => deleteProgram(e,program._id)}>Delete</button>
+                    <Link to='#'>
+                      <img src={BookMark} alt=""  
+                        style={{width:"20px", height: "20px"}} 
+                        onClick={(e)=>bookmarkSelectedQuestion(e, program._id,program.userId, 
+                           program.programName, 
+                           program.programCategory,
+                           program.programLanguage,
+                          )}
+                          data-bs-toggle="tooltip"
+                          title="Bookmark"
+                      />
+                    </Link>
+                    <Link to='#'>
+                      <img src={NotBookMark} alt=""  
+                        style={{width:"20px", height: "20px"}} 
+                        onClick={(e)=>unbookmarkSelectedQuestion(e, program._id, program.userId)}
+                        data-bs-toggle="tooltip"
+                        title="Unbookmark"
+                      />
+                    </Link>
                   </div>
                 </div>
+            ):<h1>You haven't saved any programs yet</h1>
+          }
+
+        </div>
+          
+        </div>
+
+
+        <div className="modal fade" id="exampleModal" tabIndex="-1" data-bs-backdrop="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div className="modal-dialog modal-dialog-scrollable modal-lg">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="exampleModalLabel"> Program Updating Form </h1>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div className="modal-body">
+              {selectedProgram ? (
+                    <UpdateCode program={selectedProgram} />
+                ) : (
+                    <p>No program selected for update</p>
+                )}
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
- 
-        
+        </div>
+
+
+        <div className="offcanvas offcanvas-start bg-dark text-light" data-bs-scroll="true" data-bs-backdrop="false" tabIndex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+          <div className="offcanvas-header">
+            <h5 className="offcanvas-title" id="offcanvasScrollingLabel">Bookmarked Questions</h5>
+            <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div className="offcanvas-body">
+            <BookmarkedQuestions />
+          </div>
+        </div>
+
       </Main>
       
     </div>
   );
-}
+};
 
 export default Vaults;

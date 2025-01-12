@@ -1,81 +1,77 @@
-label{
-    color:green;
-    font-family: Cursive;
+.login-signin-label{
+    color:Yellow;
+    font-family: Poppins;
     font-size:20px;
 }
-h1{
-    color:maroon;
+.login-signin-header{
+    color: white;
+    font-family: Poppins;
 }
 
-.input-div, input{
-    background-color: rgb(250,250,250);
-    outline:none; 
-     border:0;
-    width: 225px;
-    height:35px;
+.editor-theme-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: whitesmoke;
+    margin-bottom: 0;
+    padding: 5px;
+    gap:5px;
 }
-.input-div{
-    display: inline;
-    position: relative;
-    border:2px solid yellow;
-    width: 250px;
-    height:40px;
-    border-radius: 30px;
+.light-theme-button{
+    border: 1px solid black;
 }
-.pass-icon{
-    width:28px;
-    position: absolute;
-    left:205px;
-    bottom:5px;
-}
-.email-icon, .user-icon{
-    width:28px;
-    position: absolute;
-    right:5px;
-    bottom:5px;
+.left-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 50%;
 }
 
-.program-name-input{
-    border: 3px solid yellow;
-    color: maroon;
-    width:90%;
-    border-radius: 40px;
-    padding:3px;
-    margin:3px;
+.divider-line{
+    background: white;
+    height: 2px;
+    border: none;
 }
-::placeholder{
-    color:maroon;
+
+.input-tag{
+    background-color: rgba(40, 40, 43, 0.6);
+    border-radius: 50px;
+    color: white;
 }
-.program-category{
-    border: 3px solid yellow;
-    color: maroon;
-    width:90%;
-    border-radius: 40px;
-    padding:3px;
-    margin:3px;
+.input-tag::placeholder{
+    color: white; 
 }
-.program-language{
-    border: 3px solid yellow;
-    color: maroon;
-    width:90%;
-    border-radius: 40px;
-    padding:3px;
-    margin:3px;
+.form-text{
+    color: white;
 }
-.file-upload{
-    border: 3px solid yellow;
-    color: maroon;
-    width:90%;
-    height:50px;
-    border-radius: 40px;
-    padding:3px;
-    margin:3px;
+.google-login-button{
+    width: 100px;
 }
-input[type=file]::-webkit-file-upload-button{
-    width:30%;
-    border: 3px solid maroon;
-    border-radius: 40px;
-    color: maroon;
-    margin:3px;
-    padding:3px;
+.success-alert, .failure-alert, .name-alert, .email-alert-1 ,.email-alert-2 , .password-alert{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: none;
+}
+.right-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 50%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
 }

@@ -1,0 +1,36 @@
+label{
+    color:green;
+    font-family: Cursive;
+    font-size:20px;
+}
+h3{
+    color: Maroon;
+    font-family: Poppins;
+}
+
+.editor-theme-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: whitesmoke;
+    margin-bottom: 0;
+    padding: 5px;
+    gap:5px;
+}
+.light-theme-button{
+    border: 1px solid black;
+}
+.left-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.divider-line{
+    background: white;
+    height: 2px;
+    border: none;
+}

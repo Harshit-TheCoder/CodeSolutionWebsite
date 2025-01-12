@@ -145,8 +145,9 @@
     font-family: 'Courier New', Courier, monospace;
     height: 50px;
 }
-.typewriter h3{
+.typewriter .typewriter-text{
     color:white;
+    font-family: 'Courier New', Courier, monospace;
 }
 .typewriter {
     display: inline-block;

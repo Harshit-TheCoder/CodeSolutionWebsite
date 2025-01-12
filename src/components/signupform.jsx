@@ -1,61 +1,105 @@
 import React, { useState } from "react";
-import bgimg from "./websitelogo.png";
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
+import {useNavigate} from "react-router-dom";
+// import googleimg from "../components/skills/google.png";
 import "../css/form.css";
-import showimg from "./show.png";
-import hideimg from "./hide.png";
 
-import emailicon from "./email.png";
-import usericon from "./user.png";
 function SignUpForm() {
-    const [showPassword1, setShowPassword1] = useState(false);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
-    const togglePasswordVisibility1 = () => {
-        setShowPassword1(!showPassword1);
-    };
+    const handleGoogleLoginSuccess = async (credentialResponse)=>{
+        console.log("Google Sign In Success", credentialResponse);
+        const decode = jwtDecode(credentialResponse?.credential);
+        console.log(decode);
+        const name = decode.name;
+        const email = decode.email;
+        const password = "google";
+        console.log(name);
+        console.log(email);
+        console.log(password);
 
-    const [showPassword2, setShowPassword2] = useState(false);
+        let result = await fetch("http://localhost:5000/google_register",{
+            method:"post",
+            body: JSON.stringify({name, email, password}),
+            headers:{
+                'Content-Type':'application/json',
+            }
+        });
+        result = await result.json();
+        console.log(result);
+        localStorage.setItem("user", JSON.stringify(result));
+        alert("Google SignUp Successful !! Account Created");
+        navigate("/dashboard");
+    }
+    const handleGoogleLoginError = ()=>{
+        console.log("Google SignIn error");
+    }
 
-    const togglePasswordVisibility2 = () => {
-        setShowPassword2(!showPassword2);
-    };
+    
 
+    const handleRegister= async (event)=>{
+        event.preventDefault();
+        console.log("Account Created");
+        console.log(name, email, password);
+        let result = await fetch("http://localhost:5000/register",{
+            method:'post',
+            body: JSON.stringify({name, email, password}),
+            headers:{
+                'Content-Type':'application/json'
+            }
+        });
+        result = await result.json();
+        console.log(result);
+        localStorage.setItem("user", JSON.stringify(result));
+        alert("Account Successfully created");
+        navigate("/dashboard");
+    }
     return (
         <div className="row">
             
             <div className="col-12" style={{ backgroundColor: "4a6d6d" }}>
                 <form>
-                    <div className="container" style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                        <div className="row">
-                            <center><img src={bgimg} style={{ width: "90px", height: "90px"}} /></center>
-                        </div>
-                        <br />
-                        <div className="row">
-                            <div className="col-4"><center><label htmlFor="username">Username:</label></center></div>
-                            <div className="col-8 input-div"><img src={usericon} className="user-icon"/><input type="text" id="username" name="username" required /><br /><br /></div>
-                        </div>
-                        <div className="row">
-                            <div className="col-4"><center><label htmlFor="email">Email-Id:</label></center></div>
-                            <div className="col-8 input-div"><img src={emailicon} className="email-icon"/><input type="email" id="email" name="email" required /><br /><br /></div>
-                        </div>
-                        
-                        <div className="row">
-                            <div className="col-4"><center><label htmlFor="password">Password:</label></center></div>
-                            <div className="col-8 input-div">
-                                <input type={showPassword1 ? "text" : "password"} id="password" name="password" required />
-                                <img src={showPassword1 ? hideimg : showimg} className="pass-icon" onClick={togglePasswordVisibility1} />
-                            </div><br /><br />
-                        </div>
-                        <div className="row">
-                            <div className="col-4"><center><label htmlFor="confirm-password">Confirm Password:</label></center></div>
-                            <div className="col-8 input-div">
-                                <input type={showPassword2 ? "text" : "password"} id="confirm-password" name="confirm-password" required />
-                                <img src={showPassword2 ? hideimg : showimg} className="pass-icon" onClick={togglePasswordVisibility2} />
-                            </div><br /><br />
-                        </div>
-                        <div className="row">
-                            <div className="col-4"><center><button type="submit" className="btn btn-primary">Submit Form</button></center></div>
-                        </div>
+                <div className="mb-3">
+                    <GoogleOAuthProvider 
+                        clientId="183001888898-lrn8gm462ngpckb9r62scucek6m2fva5.apps.googleusercontent.com"
+                    >
+                        <GoogleLogin
+                            onSuccess={handleGoogleLoginSuccess}
+                            onError={handleGoogleLoginError}
+                        >
+
+                        </GoogleLogin>
+                    </GoogleOAuthProvider>
                     </div>
+                    <div className="mb-3">
+                        <hr />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputName2" className="form-label">Name</label>
+                        <input type="text" className="form-control" id="exampleInputName2" name="username"
+                            onChange={(e)=>setName(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputEmail2" className="form-label">Email Address</label>
+                        <input type="email" className="form-control" id="exampleInputEmail2" aria-describedby="emailHelp1" name="email"
+                            onChange={(e)=>setEmail(e.target.value)}
+                        />
+                        <div id="emailHelp1" className="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputPassword2" className="form-label">Password</label>
+                        <input type="password" className="form-control" id="exampleInputPassword2" name="password"
+                            onChange={(e)=>setPassword(e.target.value)}
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-primary"
+                        onClick={handleRegister}
+                    >Submit</button>
                 </form>
             </div>
             

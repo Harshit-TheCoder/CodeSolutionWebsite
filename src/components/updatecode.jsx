@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, {useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Editor } from "@monaco-editor/react";
-import "../css/fileUploadForm.css";
-import { useNavigate } from "react-router-dom";
-const FileUploadForm = () =>{
-    const [programName, setProgramName] = useState('');
-    const [programQuestion, setProgramQuestion] = useState('');
-    const [programCategory, setProgramCategory] = useState('Other');
-    const [programLanguage, setProgramLanguage] = useState('cpp');
-    const [program, setProgram] = useState('');
+import "../css/form.css";
+const UpdateCode = (props)=>{
+    const programId = props.program?._id || '';
+    const [programName, setProgramName] = useState(props.program?.programName || '');
+    const [programQuestion, setProgramQuestion] = useState(props.program?.programQuestion || '');
+    const [programCategory, setProgramCategory] = useState(props.program?.programCategory || 'Sorting');
+    const [programLanguage, setProgramLanguage] = useState(props.program?.programLanguage || 'cpp');
+    const [program, setProgram] = useState(props.program?.program || '');
     const [editorTheme, setEditorTheme] = useState('vs-dark');
     const [border, setBorder] = useState('white');
     const navigate = useNavigate();
-
 
     const applyLightTheme=(e)=>{
         e.preventDefault();
@@ -23,6 +23,15 @@ const FileUploadForm = () =>{
         setEditorTheme('vs-dark');
         setBorder('1px solid white');
     }
+    useEffect(() => {
+        if (props.program) {
+          setProgramName(props.program.programName || '');
+          setProgramQuestion(props.program.programQuestion || '');
+          setProgramCategory(props.program.programCategory || 'Sorting');
+          setProgramLanguage(props.program.programLanguage || 'cpp');
+          setProgram(props.program.program || '');
+        }
+    }, [props.program]);
 
     const handleSubmit= async (e)=>{
         e.preventDefault();
@@ -31,36 +40,35 @@ const FileUploadForm = () =>{
         console.log(programCategory);
         console.log(programLanguage);
         console.log(program);
-        alert("Code Details Submitted");
-        let userId = JSON.parse(localStorage.getItem("user"))._id;
-        console.log(userId);
-        let result = await fetch("http://localhost:5000/program_upload", {
-            method:"post",
-            body: JSON.stringify({userId, programName, programQuestion, programCategory, programLanguage, program}),
+
+        let result = await fetch(`http://localhost:5000/update_program/${programId}`,{
+            method:'put',
+            body: JSON.stringify({programName, programQuestion, programCategory, programLanguage, program}),
             headers:{
-                'Content-Type':"application/json"
+                'Content-Type':'application/json'
             }
         });
-
         result = await result.json();
         console.log(result);
-        alert("Data stored in database");
-        navigate("/dashboard");
+        alert("Code Details Submitted");
     }
     return(
         <form action="" style={{display:"flex", flexDirection:"column", gap:"20px"}}>
             <label htmlFor="program-name" className="form-label">Program Name:</label>
             <input className="form-control" type="text" placeholder='Enter Program Name'
-             name="program-name" id="program-name"
+                name="program-name" id="program-name"
+                value={programName}
                 onChange={(e)=>setProgramName(e.target.value)}
                 // style={{border:"1px solid black", padding: "5px", margin:"1px", borderRadius:"40px", width:"500px"}}
             />
             <label htmlFor="program-question" className="form-label">Program Question:</label>
             <textarea name="program-question" id="program-question" className="form-control"
+                value={programQuestion}
                 onChange={(e)=>setProgramQuestion(e.target.value)}
             ></textarea>
             <label htmlFor="program-category">Program Category(Sorting/Searching/Arrays)</label>
             <select className="form-select" id="program-category" name="program-category"
+                value={programCategory}
                 onChange={(e)=>setProgramCategory(e.target.value)}
             >
                 <option value="Other">Other</option>
@@ -83,6 +91,7 @@ const FileUploadForm = () =>{
             </select>
             <label htmlFor="program-language" className="form-label">Programming Language:</label>
             <select className="form-select" name="program-language" id="program-language"
+                value={programLanguage}
                 onChange={(e)=>setProgramLanguage(e.target.value)}
             >
                 <option value="cpp">CPP</option>
@@ -93,6 +102,7 @@ const FileUploadForm = () =>{
             <label htmlFor="program" className="form-label">Program Upload</label>
             {/* <input type="file" required className="file-upload"/> */}
             {/* <textarea name="program" id="program" className="form-control"
+                value={program}
                 onChange={(e)=>setProgram(e.target.value)}
             ></textarea> */}
             <div className='editor-theme-div'>
@@ -105,18 +115,19 @@ const FileUploadForm = () =>{
                     >Dark</button>
                 </div>
             </div>
-            <div className="editor-div" style={{border: border}}>
-                <Editor 
+            <div className='editor-div' style={{border: border}}>
+                <Editor
                     height="400px"
-                    name="program"
+                    name="program" 
                     id="program"
-                    language={programLanguage === "cpp" ? "cpp": programLanguage}
+                    language={programLanguage === "cpp" ? "cpp" : programLanguage}
+                    value={program}
                     onChange={(value) => setProgram(value || "")}
-                    theme = {editorTheme}
+                    theme={editorTheme}
                     options={{
-                        minimap: { enabled: false},
-                        fontSize : 14,
-                        scrollBeyondLastLine: false,
+                    minimap: { enabled: false },
+                    fontSize: 14,
+                    scrollBeyondLastLine: false,
                     }}
                 />
             </div>
@@ -124,6 +135,6 @@ const FileUploadForm = () =>{
             <button className="btn btn-primary" onClick={handleSubmit}>Submit Code Details</button>
         </form>
     );
-};
+}
 
-export default FileUploadForm;
+export default UpdateCode;

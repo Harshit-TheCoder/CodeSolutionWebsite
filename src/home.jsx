@@ -11,7 +11,7 @@ function Home() {
   
     return (
 
-        <body >
+        <div >
           <Header />
           <Main>
             <div style={{display:"flex", flexDirection:"column", justifyContent:"space-evenly", gap:"3px"}}>
@@ -20,22 +20,11 @@ function Home() {
                       <img className="website_logo" src={logo} alt="coding website logo"/> 
                     </center> 
                   </div>
-                  <div class="typewriter-container">
-                     <span class="typewriter">
-                        <center><h3>A TREASURE TROVE OF ALGORITHMS AND CODING KNOWLEDGE</h3></center>
+                  <div className="typewriter-container">
+                     <span className="typewriter">
+                        <center><h3 className="typewriter-text">A TREASURE TROVE OF ALGORITHMS AND CODING KNOWLEDGE</h3></center>
                       </span>
-                      {/* <span class="typewriter">
-                        <center><h3>Your Personal DSA Repository & Coding Companion.</h3></center>
-                      </span> 
-                      <span class="typewriter">
-                        <center><h3>Code Smarter, Not Harder-Store Your DSA Journey Here.</h3></center>
-                      </span>
-                      <span class="typewriter">
-                        <center><h3>Store, Solve, and Succeed with AlgoVault.</h3></center>
-                      </span>
-                      <span class="typewriter">
-                        <center><h3>Empowering Your Coding Journey, Program by Program.</h3></center>
-                      </span> */}
+              
                     
 
                   </div>
@@ -97,7 +86,7 @@ function Home() {
             </div>
           </Main>
           {/* <Footer /> */}
-        </body>
+        </div>
         
    
 
