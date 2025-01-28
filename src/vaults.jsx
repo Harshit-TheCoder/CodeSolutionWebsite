@@ -35,7 +35,7 @@ const Vaults=()=>{
   const getSavedPrograms = async ()=>{
     const userId = JSON.parse(localStorage.getItem('user'))._id;
     console.log(userId);
-    let result = await fetch(`http://localhost:5000/vault/${userId}`);
+    let result = await fetch(`https://algovault-backend.onrender.com/vault/${userId}`);
     result = await result.json();
     console.log(result);
     setPrograms(result);
@@ -44,7 +44,7 @@ const Vaults=()=>{
   const deleteProgram= async (e,id)=>{
       e.stopPropagation();
       console.log(id);
-      let result = await fetch(`http://localhost:5000/delete_program/${id}`,{
+      let result = await fetch(`https://algovault-backend.onrender.com/delete_program/${id}`,{
         method:"Delete",
       });
       result = await result.json();
@@ -63,7 +63,7 @@ const Vaults=()=>{
   const searchProgram = async (event) =>{
       let key = event.target.value;
       if(key){
-        let result = await fetch(`http://localhost:5000/search_program/${key}`);
+        let result = await fetch(`https://algovault-backend.onrender.com/search_program/${key}`);
         result = await result.json();
         if(result){
           setPrograms(result);
@@ -80,7 +80,7 @@ const Vaults=()=>{
     console.log(programName,programCategory,programLanguage, userId, questionId);
 
      
-    let result = await fetch('http://localhost:5000/bookmark_question',{
+    let result = await fetch('https://algovault-backend.onrender.com/bookmark_question',{
       method:'post',
       body: JSON.stringify({questionId, userId, programName,programCategory,programLanguage}),
       headers:{
@@ -100,7 +100,7 @@ const Vaults=()=>{
     e.stopPropagation();
     e.preventDefault();
 
-    let result = await fetch(`http://localhost:5000/bookmark_question`,{
+    let result = await fetch(`https://algovault-backend.onrender.com/bookmark_question`,{
       method:'delete',
       body: JSON.stringify({questionId, userId}),
       headers:{

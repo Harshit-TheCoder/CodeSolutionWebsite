@@ -40,7 +40,7 @@ const ShowProgram=()=>{
 
     const saveNotes = async (e)=>{
         e.preventDefault();
-        let result = await fetch("http://localhost:5000/notes",{
+        let result = await fetch("https://algovault-backend.onrender.com/notes",{
             method:"post",
             body: JSON.stringify({questionId, userId, notes}),
             headers:{
@@ -55,7 +55,7 @@ const ShowProgram=()=>{
     
     const updateNotes = async (e)=>{
         e.preventDefault();
-        let result = await fetch("http://localhost:5000/notes",{
+        let result = await fetch("https://algovault-backend.onrender.com/notes",{
             method:"put",
             body: JSON.stringify({questionId, userId, notes}),
             headers:{
@@ -81,7 +81,7 @@ const ShowProgram=()=>{
       }, [questionId, userId]);
 
     const fetchNotes = async () => {
-        let result = await fetch("http://localhost:5000/get_notes", {
+        let result = await fetch("https://algovault-backend.onrender.com/get_notes", {
             method: "post",
             body: JSON.stringify({ questionId, userId }),
             headers: {
@@ -98,7 +98,7 @@ const ShowProgram=()=>{
 
 
     const getProgramDetails = async ()=>{
-        let result = await fetch(`http://localhost:5000/program/${params.id}`);
+        let result = await fetch(`https://algovault-backend.onrender.com/program/${params.id}`);
         result = await result.json()
         console.log(result);
         setProgramName(result.programName);

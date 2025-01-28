@@ -22,7 +22,7 @@ function SignUpForm() {
         console.log(email);
         console.log(password);
 
-        let result = await fetch("http://localhost:5000/google_register",{
+        let result = await fetch("https://algovault-backend.onrender.com/google_register",{
             method:"post",
             body: JSON.stringify({name, email, password}),
             headers:{
@@ -45,7 +45,7 @@ function SignUpForm() {
         event.preventDefault();
         console.log("Account Created");
         console.log(name, email, password);
-        let result = await fetch("http://localhost:5000/register",{
+        let result = await fetch("https://algovault-backend.onrender.com/register",{
             method:'post',
             body: JSON.stringify({name, email, password}),
             headers:{

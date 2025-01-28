@@ -41,7 +41,7 @@ const UpdateCode = (props)=>{
         console.log(programLanguage);
         console.log(program);
 
-        let result = await fetch(`http://localhost:5000/update_program/${programId}`,{
+        let result = await fetch(`https://algovault-backend.onrender.com/update_program/${programId}`,{
             method:'put',
             body: JSON.stringify({programName, programQuestion, programCategory, programLanguage, program}),
             headers:{

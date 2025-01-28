@@ -31,7 +31,7 @@ const OtpAuth = () =>{
         localStorage.setItem('otp', otp);
         localStorage.setItem('otpSentTime', Date.now());
         setLoading(true);
-        let result = await fetch("http://localhost:5000/send-email",{
+        let result = await fetch("https://algovault-backend.onrender.com/send-email",{
             method:'post',
             body: JSON.stringify({name, email, otp}),
             headers:{

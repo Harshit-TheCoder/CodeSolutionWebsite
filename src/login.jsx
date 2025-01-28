@@ -29,7 +29,7 @@ const Login = () =>{
             console.log(name);
             console.log(email);
             console.log(password);
-            let result = await fetch("http://localhost:5000/google_login",{
+            let result = await fetch("https://algovault-backend.onrender.com/google_login",{
                 method:"post",
                 body: JSON.stringify({name, email, password}),
                 headers:{
@@ -74,7 +74,7 @@ const Login = () =>{
             }
 
 
-            let result = await fetch("http://localhost:5000/login",{
+            let result = await fetch("https://algovault-backend.onrender.com/login",{
                 method:"post",
                 body: JSON.stringify({name, email, password}),
                 headers:{
