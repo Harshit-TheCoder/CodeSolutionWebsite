@@ -25,7 +25,7 @@ function LoginForm() {
         console.log(name);
         console.log(email);
         console.log(password);
-        let result = await fetch("http://localhost:5000/google_login",{
+        let result = await fetch("https://algovault-backend-1.onrender.com/google_login",{
             method:"post",
             body: JSON.stringify({name, email, password}),
             headers:{
@@ -49,7 +49,7 @@ function LoginForm() {
     const handleLogin= async (event)=>{
         event.preventDefault();
         console.log(name, email, password);
-        let result = await fetch("http://localhost:5000/login",{
+        let result = await fetch("https://algovault-backend-1.onrender.com/login",{
             method:"post",
             body: JSON.stringify({name, email, password}),
             headers:{

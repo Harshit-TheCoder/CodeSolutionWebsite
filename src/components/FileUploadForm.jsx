@@ -34,7 +34,7 @@ const FileUploadForm = () =>{
         alert("Code Details Submitted");
         let userId = JSON.parse(localStorage.getItem("user"))._id;
         console.log(userId);
-        let result = await fetch("http://localhost:5000/program_upload", {
+        let result = await fetch("https://algovault-backend-1.onrender.com/program_upload", {
             method:"post",
             body: JSON.stringify({userId, programName, programQuestion, programCategory, programLanguage, program}),
             headers:{

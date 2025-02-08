@@ -26,7 +26,7 @@ const BookmarkedQuestions = () => {
     }
 
     const getBookmarkedQuestions = async ()=>{
-        let result = await fetch(`http://localhost:5000/bookmark_question/${userId}`);
+        let result = await fetch(`https://algovault-backend-1.onrender.com/bookmark_question/${userId}`);
         result = await result.json();
         setQuestions(result);
     }
