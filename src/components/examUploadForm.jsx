@@ -68,6 +68,11 @@ const ExamUploadForm = () => {
                     <div className="mb-3">
                         <label className="form-label">
                             <h3>Give Exam Details</h3>
+                            <p style={{color: "white"}}>
+                                Note: Please inspect and keep a track in local storage whether programs are saved or not.
+                                <br />
+                                (Browser Inspect works in full screen mode)
+                            </p>
                         </label>
                     </div>
                     <div className="mb-3">
