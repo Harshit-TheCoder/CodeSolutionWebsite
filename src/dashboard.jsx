@@ -17,7 +17,7 @@ const Dashboard= ()=>{
             const details = JSON.parse(localStorage.getItem('user'));
             console.log("Dashboard details:");
             console.log(details);
-            let result = await fetch("https://algovault-backend-1.onrender.com/dashboard",{
+            let result = await fetch("http://localhost:5000/dashboard",{
                 method:'post',
                 body: JSON.stringify({name: details.name, email: details.email, password: details.password}),
                 headers:{
@@ -30,7 +30,7 @@ const Dashboard= ()=>{
             setId(result._id);
             setEmail(result.email);
 
-            result = await fetch(`https://algovault-backend-1.onrender.com/programs/${details._id}`);
+            result = await fetch(`http://localhost:5000/programs/${details._id}`);
             result = await result.json();
             if(result.Length) setNumPrograms(result.Length);
             else setUsername(result.Message);

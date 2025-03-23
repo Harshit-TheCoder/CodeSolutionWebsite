@@ -13,7 +13,10 @@ import Login from './login';
 import SignUp from './signup';
 import OtpAuth from './otpAuth';
 import OtpAuthVerify from './otpAuthVerify';
-
+import ExamPortal from './exam_portal';
+import ExamUploadForm from './components/examUploadForm';
+import TestReport from './components/TestReport';
+import Leaderboard from './Leaderboard';
 function App() {
   
   return (
@@ -25,11 +28,16 @@ function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/vaults" element={<Vaults />} />
+          <Route path="/exam_portal_form" element={<ExamUploadForm />} />
+          <Route path="/exam_portal" element={<ExamPortal />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/test_report" element={<TestReport />} />
           <Route path="/program/:id" element={<ShowProgram />} />
           <Route path="/otpauth" element={<OtpAuth />} />
           <Route path="/otpauthverify" element={<OtpAuthVerify />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          
         </Routes>
       </Router>
    

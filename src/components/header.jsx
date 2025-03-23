@@ -33,6 +33,26 @@ const Header=()=>{
           </div>
         </div>
 
+
+        <div className="modal fade" id="staticBackdrop4" data-bs-backdrop="false" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel4" aria-hidden="true">
+          <div className="modal-dialog modal-dialog-scrollable modal-lg">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="staticBackdropLabel4">Give your feedback</h1>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div className="modal-body" style={{height:"700px"}}>
+                  <iframe src="https://forms.gle/GaUWkVTy8EoscNkE7" frameborder="0" style={{width:"100%", height:"100%"}}></iframe>
+
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                {/* <button type="button" className="btn btn-primary">Understood</button> */}
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="modal fade" id="staticBackdrop3" data-bs-backdrop="false" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel3" aria-hidden="true">
           <div className="modal-dialog modal-dialog-scrollable modal-lg">
             <div className="modal-content">
@@ -92,14 +112,23 @@ const Header=()=>{
               <li className="nav-item" id="6">
                 <a className="nav-link list_items" aria-current="page" href="/vaults">Vault</a>
               </li>
-              <li className="nav-item" id="6">
+              <li className="nav-item" id="8">
                 <a className="nav-link list_items" aria-current="page" href="/dashboard">Dashboard</a>
+              </li>
+              <li className="nav-item" id="9">
+                <a className="nav-link list_items" aria-current="page" href="/exam_portal_form">Exam Portal</a>
+              </li>
+              <li className="nav-item" id="9">
+                <a className="nav-link list_items" aria-current="page" href="/leaderboard">Leaderboard</a>
               </li>
               <li className="nav-item" id="7">
                 <a className="nav-link list_items" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Upload</a>
               </li>
+              <li className="nav-item" id="7">
+                <a className="nav-link list_items" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">Feedback</a>
+              </li>
               <li className="nav-item" id="5">
-                <Link to="/" onClick={handleLogout} className='btn btn-primary'> Logout</Link>
+                <Link to="/" onClick={handleLogout} className='btn btn-primary'>Logout</Link>
               </li>
             </ul>
             :
