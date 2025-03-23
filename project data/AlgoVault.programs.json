@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "678dd437bf5cb9834b27d936"
+  },
+  "userId": "678dd3c5bf5cb9834b27d928",
+  "programName": "Swap 2 numbers",
+  "programQuestion": "Write a python program to swap 2 numbers",
+  "programCategory": "Other",
+  "programLanguage": "python",
+  "program": "a = 3\r\nb = 5\r\na=a^b\r\nb=a^b\r\na=a^b\r\nprint(a,b)",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dcf4a397325127ccbbff2d"
+  },
+  "userId": "678dd3c5bf5cb9834b27d928",
+  "programName": "Hello World ",
+  "programQuestion": "Write hello world program",
+  "programCategory": "Other",
+  "programLanguage": "python",
+  "program": "print(\"Hello World\")",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67df86a04dae9dd227a381c9"
+  },
+  "userId": "67df861d4dae9dd227a381c1",
+  "programName": "Hello World",
+  "programQuestion": "Write a java program to print \"Hello World\"",
+  "programCategory": "Other",
+  "programLanguage": "java",
+  "program": "import java.util.*;\r\nclass Main{\r\n    public static void main(String args[]){\r\n        System.out.println(\"Hello World\");\r\n    }\r\n}",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67df88d14dae9dd227a38205"
+  },
+  "userId": "67df87844dae9dd227a381e7",
+  "programName": "Hello World",
+  "programQuestion": "Write a python program to print Hello World",
+  "programCategory": "Other",
+  "programLanguage": "python",
+  "program": "print(\"Hello World\")",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dfbce5103e63c6f61431e2"
+  },
+  "userId": "678dd3c5bf5cb9834b27d928",
+  "programName": "Add 2 numbers",
+  "programQuestion": "Write a python program to add 2 numbers",
+  "programCategory": "Other",
+  "programLanguage": "python",
+  "program": "a = 3+4\r\nprint(a)",
+  "__v": 0
+}]

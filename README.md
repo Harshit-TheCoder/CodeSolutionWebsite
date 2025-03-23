@@ -37,6 +37,11 @@ To set up the project locally:
    
 5. *Open your browser* and visit http://localhost:3000 to view the website.✳
 
+
+6. For database install Mongodb and MongoDb Compass. Create a database AlgoVault and create following Collections:-
+   MCQQuestions, bookmarks, dsaquestions, leaderboard, links, notes, programs, users and import the JSON data present in "project data" folder
+   in the respective collections.
+
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.

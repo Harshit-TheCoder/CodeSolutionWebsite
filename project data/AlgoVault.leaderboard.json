@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "67df6f043e3ed479f96b4ef7"
+  },
+  "name": "Harshit Harlalka",
+  "email": "harshitharlalka11@gmail.com",
+  "userId": "678dd3c5bf5cb9834b27d928",
+  "points": 1070,
+  "easyTests": 18,
+  "mediumTests": 6,
+  "hardTests": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67df78be4dae9dd227a38191"
+  },
+  "name": "Kushagra Pokera",
+  "email": "kushagrapokera@gmail.com",
+  "userId": "67df77df4dae9dd227a38160",
+  "points": 240,
+  "easyTests": 6,
+  "mediumTests": 0,
+  "hardTests": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67df87c64dae9dd227a381f1"
+  },
+  "name": "Aryabhatta",
+  "email": "aryabhatta338@gmail.com",
+  "userId": "67df87844dae9dd227a381e7",
+  "points": 660,
+  "easyTests": 0,
+  "mediumTests": 6,
+  "hardTests": 6,
+  "__v": 0
+}]

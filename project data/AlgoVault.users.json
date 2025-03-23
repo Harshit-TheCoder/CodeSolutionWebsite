@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "678dd3c5bf5cb9834b27d928"
+  },
+  "name": "Harshit Harlalka",
+  "email": "harshitharlalka11@gmail.com",
+  "password": "google",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67df77df4dae9dd227a38160"
+  },
+  "name": "Kushagra Pokera",
+  "email": "kushagrapokera@gmail.com",
+  "password": "123456",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67df861d4dae9dd227a381c1"
+  },
+  "name": "Harshit Harlalka 12A 18",
+  "email": "harshitharlalka10bdpsm@gmail.com",
+  "password": "google",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67df87844dae9dd227a381e7"
+  },
+  "name": "Aryabhatta",
+  "email": "aryabhatta338@gmail.com",
+  "password": "google",
+  "__v": 0
+}]

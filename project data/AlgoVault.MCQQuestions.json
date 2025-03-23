@@ -1,0 +1,360 @@
+[{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adc1"
+  },
+  "Question": "What is the time complexity of searching an element in an unsorted array?",
+  "Options": [
+    "O(1)",
+    "O(log n)",
+    "O(n)",
+    "O(n log n)"
+  ],
+  "Correct Answer": "O(n)",
+  "Marks": 1,
+  "Difficulty": "Easy"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adc2"
+  },
+  "Question": "Which data structure follows the First In First Out (FIFO) principle?",
+  "Options": [
+    "Stack",
+    "Queue",
+    "Heap",
+    "Tree"
+  ],
+  "Correct Answer": "Queue",
+  "Marks": 1,
+  "Difficulty": "Easy"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adc3"
+  },
+  "Question": "Which of the following is a linear data structure?",
+  "Options": [
+    "Graph",
+    "Tree",
+    "Queue",
+    "Hash Table"
+  ],
+  "Correct Answer": "Queue",
+  "Marks": 1,
+  "Difficulty": "Easy"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adc4"
+  },
+  "Question": "Which sorting algorithm has the best average-case performance?",
+  "Options": [
+    "Bubble Sort",
+    "Quick Sort",
+    "Merge Sort",
+    "Selection Sort"
+  ],
+  "Correct Answer": "Quick Sort",
+  "Marks": 1,
+  "Difficulty": "Easy"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adc5"
+  },
+  "Question": "Which data structure is used in recursion?",
+  "Options": [
+    "Queue",
+    "Stack",
+    "Heap",
+    "Graph"
+  ],
+  "Correct Answer": "Stack",
+  "Marks": 1,
+  "Difficulty": "Easy"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adc6"
+  },
+  "Question": "What is the worst-case time complexity of linear search?",
+  "Options": [
+    "O(1)",
+    "O(log n)",
+    "O(n)",
+    "O(n^2)"
+  ],
+  "Correct Answer": "O(n)",
+  "Marks": 1,
+  "Difficulty": "Easy"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adc7"
+  },
+  "Question": "Which data structure is used for implementing BFS?",
+  "Options": [
+    "Stack",
+    "Queue",
+    "Heap",
+    "Array"
+  ],
+  "Correct Answer": "Queue",
+  "Marks": 1,
+  "Difficulty": "Easy"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adc8"
+  },
+  "Question": "Which of the following operations has O(1) time complexity in a Hash Table?",
+  "Options": [
+    "Insertion",
+    "Deletion",
+    "Search",
+    "All of the above"
+  ],
+  "Correct Answer": "All of the above",
+  "Marks": 1,
+  "Difficulty": "Easy"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adc9"
+  },
+  "Question": "Which of the following is not a stable sorting algorithm?",
+  "Options": [
+    "Merge Sort",
+    "Quick Sort",
+    "Bubble Sort",
+    "Insertion Sort"
+  ],
+  "Correct Answer": "Quick Sort",
+  "Marks": 1,
+  "Difficulty": "Easy"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adca"
+  },
+  "Question": "Which traversal method uses a Stack?",
+  "Options": [
+    "BFS",
+    "DFS",
+    "Dijkstra",
+    "Prim’s Algorithm"
+  ],
+  "Correct Answer": "DFS",
+  "Marks": 1,
+  "Difficulty": "Easy"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adcb"
+  },
+  "Question": "What is the worst-case time complexity of quicksort?",
+  "Options": [
+    "O(n log n)",
+    "O(n^2)",
+    "O(n)",
+    "O(log n)"
+  ],
+  "Correct Answer": "O(n^2)",
+  "Marks": 2,
+  "Difficulty": "Medium"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adcc"
+  },
+  "Question": "Which algorithm is used to find the shortest path in a weighted graph?",
+  "Options": [
+    "Dijkstra’s Algorithm",
+    "Prim’s Algorithm",
+    "Kruskal’s Algorithm",
+    "Bellman-Ford Algorithm"
+  ],
+  "Correct Answer": "Dijkstra’s Algorithm",
+  "Marks": 2,
+  "Difficulty": "Medium"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adcd"
+  },
+  "Question": "Which technique is used in dynamic programming to avoid redundant calculations?",
+  "Options": [
+    "Recursion",
+    "Backtracking",
+    "Memoization",
+    "Divide and Conquer"
+  ],
+  "Correct Answer": "Memoization",
+  "Marks": 2,
+  "Difficulty": "Medium"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adce"
+  },
+  "Question": "Which data structure is best for implementing an LRU Cache?",
+  "Options": [
+    "Array",
+    "Stack",
+    "Queue",
+    "HashMap and Doubly Linked List"
+  ],
+  "Correct Answer": "HashMap and Doubly Linked List",
+  "Marks": 2,
+  "Difficulty": "Medium"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15adcf"
+  },
+  "Question": "Which sorting algorithm is best suited for sorting a nearly sorted array?",
+  "Options": [
+    "Quick Sort",
+    "Bubble Sort",
+    "Insertion Sort",
+    "Heap Sort"
+  ],
+  "Correct Answer": "Insertion Sort",
+  "Marks": 2,
+  "Difficulty": "Medium"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15add0"
+  },
+  "Question": "Which data structure efficiently supports searching, insertion, and deletion in O(log n) time?",
+  "Options": [
+    "Queue",
+    "Stack",
+    "Binary Search Tree",
+    "Hash Table"
+  ],
+  "Correct Answer": "Binary Search Tree",
+  "Marks": 2,
+  "Difficulty": "Medium"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15add1"
+  },
+  "Question": "Which of the following algorithms is not used for Minimum Spanning Tree?",
+  "Options": [
+    "Kruskal’s Algorithm",
+    "Prim’s Algorithm",
+    "Dijkstra’s Algorithm",
+    "Boruvka’s Algorithm"
+  ],
+  "Correct Answer": "Dijkstra’s Algorithm",
+  "Marks": 2,
+  "Difficulty": "Medium"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15add2"
+  },
+  "Question": "Which of the following sorting algorithms is best suited for large datasets?",
+  "Options": [
+    "Quick Sort",
+    "Bubble Sort",
+    "Selection Sort",
+    "Merge Sort"
+  ],
+  "Correct Answer": "Merge Sort",
+  "Marks": 2,
+  "Difficulty": "Medium"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15add3"
+  },
+  "Question": "What is the time complexity of inserting a node in a binary search tree (BST) in the worst case?",
+  "Options": [
+    "O(1)",
+    "O(n)",
+    "O(log n)",
+    "O(n log n)"
+  ],
+  "Correct Answer": "O(n)",
+  "Marks": 3,
+  "Difficulty": "Hard"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15add4"
+  },
+  "Question": "Which algorithm is used to detect cycles in a directed graph?",
+  "Options": [
+    "BFS",
+    "DFS",
+    "Dijkstra’s Algorithm",
+    "Bellman-Ford Algorithm"
+  ],
+  "Correct Answer": "DFS",
+  "Marks": 3,
+  "Difficulty": "Hard"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15add5"
+  },
+  "Question": "Which of the following problems can be solved using the two-pointer technique?",
+  "Options": [
+    "Finding a pair with a given sum",
+    "Sorting an array",
+    "Finding the shortest path in a graph",
+    "Detecting a cycle in a graph"
+  ],
+  "Correct Answer": "Finding a pair with a given sum",
+  "Marks": 3,
+  "Difficulty": "Hard"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15add6"
+  },
+  "Question": "Which data structure is used in implementing Dijkstra’s Algorithm efficiently?",
+  "Options": [
+    "Stack",
+    "Queue",
+    "Heap",
+    "Linked List"
+  ],
+  "Correct Answer": "Heap",
+  "Marks": 3,
+  "Difficulty": "Hard"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15add7"
+  },
+  "Question": "Which algorithm is used to check if a graph is bipartite?",
+  "Options": [
+    "BFS",
+    "DFS",
+    "Dijkstra’s Algorithm",
+    "Kruskal’s Algorithm"
+  ],
+  "Correct Answer": "BFS",
+  "Marks": 3,
+  "Difficulty": "Hard"
+},
+{
+  "_id": {
+    "$oid": "67cbd410bc7a60502e15add8"
+  },
+  "Question": "What is the time complexity of the Floyd-Warshall algorithm?",
+  "Options": [
+    "O(n)",
+    "O(n log n)",
+    "O(n^2)",
+    "O(n^3)"
+  ],
+  "Correct Answer": "O(n^3)",
+  "Marks": 3,
+  "Difficulty": "Hard"
+}]

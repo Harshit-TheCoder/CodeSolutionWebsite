@@ -1,0 +1,1136 @@
+[{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cc8"
+  },
+  "Name": "Rearrange the array in alternating positive and negative items",
+  "Description": "Rearrange the given array so that positive and negative numbers appear in an alternating fashion.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 2, -3, -4, 5, -6]",
+      "Output": "[-3, 1, -4, 2, -6, 5]",
+      "Explanation": "Negatives and positives are alternated while preserving order.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cc9"
+      }
+    },
+    {
+      "Input": "[1, -2, 3, -4, 5]",
+      "Output": "[-2, 1, -4, 3, 5]",
+      "Explanation": "Alternating order is maintained.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cca"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79ccb"
+  },
+  "Name": "Longest Consecutive Sequence in an Array",
+  "Description": "Find the length of the longest sequence of consecutive numbers in an unsorted array.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[100, 4, 200, 1, 3, 2]",
+      "Output": "4",
+      "Explanation": "The longest sequence is [1, 2, 3, 4].",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ccc"
+      }
+    },
+    {
+      "Input": "[9, 1, 4, 7, 3, -1, 0, 5, 8, -2, 6]",
+      "Output": "7",
+      "Explanation": "The longest sequence is [-2, -1, 0, 1, 3, 4, 5, 6, 7, 8, 9].",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ccd"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cce"
+  },
+  "Name": "Print the matrix in spiral manner",
+  "Description": "Traverse and print the given matrix in a spiral order.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+      "Output": "[1, 2, 3, 6, 9, 8, 7, 4, 5]",
+      "Explanation": "Start from top-left and move right, down, left, and up in a spiral manner.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ccf"
+      }
+    },
+    {
+      "Input": "[[1, 2], [3, 4]]",
+      "Output": "[1, 2, 4, 3]",
+      "Explanation": "For a 2x2 matrix, traverse in a spiral order.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cd0"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cd1"
+  },
+  "Name": "Count subarrays with given sum",
+  "Description": "Find the number of contiguous subarrays that sum up to a given value.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 1, 1], sum = 2",
+      "Output": "2",
+      "Explanation": "Two subarrays ([1,1] at index 0-1 and 1-2) sum to 2.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cd2"
+      }
+    },
+    {
+      "Input": "[3, 4, 7, 2, -3, 1, 4, 2], sum = 7",
+      "Output": "4",
+      "Explanation": "Four subarrays sum to 7.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cd3"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cd4"
+  },
+  "Name": "Merge two sorted arrays without extra space",
+  "Description": "Merge two sorted arrays in-place without using extra space.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "arr1 = [1, 3, 5, 7], arr2 = [2, 4, 6, 8]",
+      "Output": "arr1 = [1, 2, 3, 4], arr2 = [5, 6, 7, 8]",
+      "Explanation": "The two arrays are merged in sorted order.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cd5"
+      }
+    },
+    {
+      "Input": "arr1 = [10, 12], arr2 = [5, 18, 20]",
+      "Output": "arr1 = [5, 10], arr2 = [12, 18, 20]",
+      "Explanation": "Merged without extra space and sorted.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cd6"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cd7"
+  },
+  "Name": "Print the matrix in spiral manner",
+  "Description": "Traverse and print the given matrix in a spiral order.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+      "Output": "[1, 2, 3, 6, 9, 8, 7, 4, 5]",
+      "Explanation": "Start from top-left and move right, down, left, and up in a spiral manner.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cd8"
+      }
+    },
+    {
+      "Input": "[[1, 2], [3, 4]]",
+      "Output": "[1, 2, 4, 3]",
+      "Explanation": "For a 2x2 matrix, traverse in a spiral order.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cd9"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cda"
+  },
+  "Name": "Count subarrays with given sum",
+  "Description": "Find the number of contiguous subarrays that sum up to a given value.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 1, 1], sum = 2",
+      "Output": "2",
+      "Explanation": "Two subarrays ([1,1] at index 0-1 and 1-2) sum to 2.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cdb"
+      }
+    },
+    {
+      "Input": "[3, 4, 7, 2, -3, 1, 4, 2], sum = 7",
+      "Output": "4",
+      "Explanation": "Four subarrays sum to 7.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cdc"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cdd"
+  },
+  "Name": "Pascal's Triangle",
+  "Description": "Generate Pascal's Triangle up to N rows.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "numRows = 5",
+      "Output": "[[1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1]]",
+      "Explanation": "Each row is formed by summing adjacent elements of the previous row.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cde"
+      }
+    },
+    {
+      "Input": "numRows = 1",
+      "Output": "[[1]]",
+      "Explanation": "First row of Pascal’s Triangle.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cdf"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79ce0"
+  },
+  "Name": "Majority Element (>n/3 times)",
+  "Description": "Find elements that appear more than n/3 times in the array.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[3, 3, 3, 2, 2, 2, 1]",
+      "Output": "[3, 2]",
+      "Explanation": "Both 3 and 2 appear more than n/3 times.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ce1"
+      }
+    },
+    {
+      "Input": "[1, 2, 3, 4, 5]",
+      "Output": "[]",
+      "Explanation": "No element appears more than n/3 times.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ce2"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79ce3"
+  },
+  "Name": "3-Sum Problem",
+  "Description": "Find all unique triplets in an array that sum to zero.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[-1, 0, 1, 2, -1, -4]",
+      "Output": "[[-1, -1, 2], [-1, 0, 1]]",
+      "Explanation": "Triplets that sum to zero.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ce4"
+      }
+    },
+    {
+      "Input": "[0, 1, 1]",
+      "Output": "[]",
+      "Explanation": "No valid triplet exists.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ce5"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79ce6"
+  },
+  "Name": "4-Sum Problem",
+  "Description": "Find all unique quadruplets in an array that sum to a given target.",
+  "Difficulty": "Hard",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 0, -1, 0, -2, 2], target = 0",
+      "Output": "[[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]]",
+      "Explanation": "Quadruplets that sum to target.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ce7"
+      }
+    },
+    {
+      "Input": "[2, 2, 2, 2, 2], target = 8",
+      "Output": "[[2, 2, 2, 2]]",
+      "Explanation": "Single valid quadruplet.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ce8"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79ce9"
+  },
+  "Name": "Largest Subarray with 0 Sum",
+  "Description": "Find the largest subarray with sum equal to zero.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[15, -2, 2, -8, 1, 7, 10, 23]",
+      "Output": "5",
+      "Explanation": "Subarray [-2, 2, -8, 1, 7] has sum zero.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cea"
+      }
+    },
+    {
+      "Input": "[1, 2, 3]",
+      "Output": "0",
+      "Explanation": "No subarray with sum zero.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ceb"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cec"
+  },
+  "Name": "Count number of subarrays with given xor K",
+  "Description": "Find the number of contiguous subarrays whose XOR is K.",
+  "Difficulty": "Hard",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[4, 2, 2, 6, 4], K = 6",
+      "Output": "4",
+      "Explanation": "Four subarrays have XOR equal to K.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79ced"
+      }
+    },
+    {
+      "Input": "[1, 2, 3], K = 0",
+      "Output": "0",
+      "Explanation": "No subarrays with XOR equal to 0.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cee"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cef"
+  },
+  "Name": "Merge Overlapping Subintervals",
+  "Description": "Merge overlapping intervals and return the merged list.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[[1,3], [2,6], [8,10], [15,18]]",
+      "Output": "[[1,6], [8,10], [15,18]]",
+      "Explanation": "Intervals [1,3] and [2,6] merge to [1,6].",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cf0"
+      }
+    },
+    {
+      "Input": "[[1,4], [4,5]]",
+      "Output": "[[1,5]]",
+      "Explanation": "Overlapping intervals merge into one.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cf1"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cf2"
+  },
+  "Name": "Find the repeating and missing number",
+  "Description": "Find the missing and duplicate elements in an array of size N containing numbers from 1 to N.",
+  "Difficulty": "Hard",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[3, 1, 2, 5, 3]",
+      "Output": "[3, 4]",
+      "Explanation": "3 is repeated, and 4 is missing.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cf3"
+      }
+    },
+    {
+      "Input": "[1, 1]",
+      "Output": "[1, 2]",
+      "Explanation": "1 is repeated, and 2 is missing.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cf4"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cf5"
+  },
+  "Name": "Count Inversions",
+  "Description": "Count the number of inversions in an array (i.e., pairs where a[i] > a[j] for i < j).",
+  "Difficulty": "Hard",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[8, 4, 2, 1]",
+      "Output": "6",
+      "Explanation": "Pairs (8,4), (8,2), (8,1), (4,2), (4,1), and (2,1) are inversions.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cf6"
+      }
+    },
+    {
+      "Input": "[1, 2, 3]",
+      "Output": "0",
+      "Explanation": "No inversions in a sorted array.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cf7"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cf8"
+  },
+  "Name": "2Sum Problem",
+  "Description": "Find two numbers in an array that add up to a given target sum.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[2, 7, 11, 15], target = 9",
+      "Output": "[0, 1]",
+      "Explanation": "Numbers at index 0 and 1 (2 + 7) sum to 9.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cf9"
+      }
+    },
+    {
+      "Input": "[3, 2, 4], target = 6",
+      "Output": "[1, 2]",
+      "Explanation": "Numbers at index 1 and 2 (2 + 4) sum to 6.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cfa"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cfb"
+  },
+  "Name": "Sort an array of 0's, 1's, and 2's",
+  "Description": "Sort an array consisting of only 0s, 1s, and 2s without using extra space.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[2, 0, 2, 1, 1, 0]",
+      "Output": "[0, 0, 1, 1, 2, 2]",
+      "Explanation": "Sorts elements in place.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cfc"
+      }
+    },
+    {
+      "Input": "[1, 2, 0]",
+      "Output": "[0, 1, 2]",
+      "Explanation": "Sorted order of elements.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cfd"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79cfe"
+  },
+  "Name": "Majority Element (>n/2 times)",
+  "Description": "Find the element that appears more than n/2 times in an array.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[3, 3, 4, 2, 3, 3, 3]",
+      "Output": "3",
+      "Explanation": "3 appears more than n/2 times.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79cff"
+      }
+    },
+    {
+      "Input": "[2, 2, 1, 1, 1, 2, 2]",
+      "Output": "2",
+      "Explanation": "2 appears more than n/2 times.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d00"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d01"
+  },
+  "Name": "Kadane's Algorithm, maximum subarray sum",
+  "Description": "Find the maximum sum of a contiguous subarray using Kadane’s algorithm.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+      "Output": "6",
+      "Explanation": "The subarray [4, -1, 2, 1] has the maximum sum.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d02"
+      }
+    },
+    {
+      "Input": "[1]",
+      "Output": "1",
+      "Explanation": "Single-element array returns its own value.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d03"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d04"
+  },
+  "Name": "Stock Buy and Sell",
+  "Description": "Find the maximum profit that can be earned by buying and selling stocks on different days.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[7, 1, 5, 3, 6, 4]",
+      "Output": "5",
+      "Explanation": "Buy at 1, sell at 6 for max profit.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d05"
+      }
+    },
+    {
+      "Input": "[7, 6, 4, 3, 1]",
+      "Output": "0",
+      "Explanation": "No profitable transactions possible.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d06"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d07"
+  },
+  "Name": "Next Permutation",
+  "Description": "Find the next lexicographically greater permutation of the given array.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 2, 3]",
+      "Output": "[1, 3, 2]",
+      "Explanation": "The next permutation of [1, 2, 3] is [1, 3, 2].",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d08"
+      }
+    },
+    {
+      "Input": "[3, 2, 1]",
+      "Output": "[1, 2, 3]",
+      "Explanation": "Reverses to the smallest permutation.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d09"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d0a"
+  },
+  "Name": "Leaders in an Array problem",
+  "Description": "Find all elements in an array that are greater than all elements to their right.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[16, 17, 4, 3, 5, 2]",
+      "Output": "[17, 5, 2]",
+      "Explanation": "Elements 17, 5, and 2 are leaders.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d0b"
+      }
+    },
+    {
+      "Input": "[1, 2, 3, 4, 0]",
+      "Output": "[4, 0]",
+      "Explanation": "4 and 0 are leaders.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d0c"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d0d"
+  },
+  "Name": "Set Matrix Zeros",
+  "Description": "Modify the given matrix by setting entire rows and columns to zero if an element is zero.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[[1,1,1],[1,0,1],[1,1,1]]",
+      "Output": "[[1,0,1],[0,0,0],[1,0,1]]",
+      "Explanation": "Zeros propagate to their row and column.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d0e"
+      }
+    },
+    {
+      "Input": "[[0,1,2],[3,4,5],[6,7,8]]",
+      "Output": "[[0,0,0],[0,4,5],[0,7,8]]",
+      "Explanation": "First row and first column set to zero.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d0f"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d10"
+  },
+  "Name": "Rotate Matrix by 90 degrees",
+  "Description": "Rotate a given N x N matrix 90 degrees clockwise in place.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[[1,2,3],[4,5,6],[7,8,9]]",
+      "Output": "[[7,4,1],[8,5,2],[9,6,3]]",
+      "Explanation": "Matrix is rotated 90 degrees clockwise.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d11"
+      }
+    },
+    {
+      "Input": "[[1,2],[3,4]]",
+      "Output": "[[3,1],[4,2]]",
+      "Explanation": "Rotates 2x2 matrix correctly.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d12"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d13"
+  },
+  "Name": "Maximum Product Subarray",
+  "Description": "Find the maximum product that can be obtained from a contiguous subarray.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[2,3,-2,4]",
+      "Output": "6",
+      "Explanation": "Max product is obtained with subarray [2,3].",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d14"
+      }
+    },
+    {
+      "Input": "[-2,0,-1]",
+      "Output": "0",
+      "Explanation": "Maximum product is 0 (from single element 0).",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d15"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d16"
+  },
+  "Name": "Largest Element in an Array",
+  "Description": "Find the maximum element in a given array.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 5, 3, 9, 2]",
+      "Output": "9",
+      "Explanation": "The largest element in the array is 9.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d17"
+      }
+    },
+    {
+      "Input": "[-3, -1, -7, -2]",
+      "Output": "-1",
+      "Explanation": "The maximum element among negative numbers is -1.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d18"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d19"
+  },
+  "Name": "Second Largest Element in an Array without sorting",
+  "Description": "Find the second largest element in an array without sorting it.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[10, 20, 4, 45, 99]",
+      "Output": "45",
+      "Explanation": "The second largest element is 45.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d1a"
+      }
+    },
+    {
+      "Input": "[5, 5, 5, 5]",
+      "Output": "No second largest element",
+      "Explanation": "All elements are the same.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d1b"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d1c"
+  },
+  "Name": "Check if the array is sorted",
+  "Description": "Determine whether the given array is sorted in ascending order.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 2, 3, 4, 5]",
+      "Output": "true",
+      "Explanation": "The array is sorted in ascending order.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d1d"
+      }
+    },
+    {
+      "Input": "[10, 5, 20, 30]",
+      "Output": "false",
+      "Explanation": "The sequence is not in ascending order.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d1e"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d1f"
+  },
+  "Name": "Remove duplicates from Sorted array",
+  "Description": "Remove duplicate elements from a sorted array while maintaining order.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 1, 2, 2, 3, 3, 4]",
+      "Output": "[1, 2, 3, 4]",
+      "Explanation": "Duplicate elements are removed.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d20"
+      }
+    },
+    {
+      "Input": "[10, 10, 10]",
+      "Output": "[10]",
+      "Explanation": "Only one unique element remains.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d21"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d22"
+  },
+  "Name": "Left Rotate an array by one place",
+  "Description": "Rotate the given array to the left by one position.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 2, 3, 4, 5]",
+      "Output": "[2, 3, 4, 5, 1]",
+      "Explanation": "The first element moves to the last position.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d23"
+      }
+    },
+    {
+      "Input": "[7, 8, 9]",
+      "Output": "[8, 9, 7]",
+      "Explanation": "Elements are shifted left.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d24"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d25"
+  },
+  "Name": "Left rotate an array by D places",
+  "Description": "Rotate the given array to the left by D positions.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 2, 3, 4, 5], D = 2",
+      "Output": "[3, 4, 5, 1, 2]",
+      "Explanation": "The first two elements move to the end.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d26"
+      }
+    },
+    {
+      "Input": "[7, 8, 9], D = 1",
+      "Output": "[8, 9, 7]",
+      "Explanation": "Shifted left by one position.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d27"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d28"
+  },
+  "Name": "Move Zeros to end",
+  "Description": "Move all zero elements in the array to the end while maintaining the relative order of other elements.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[0, 1, 0, 3, 12]",
+      "Output": "[1, 3, 12, 0, 0]",
+      "Explanation": "Zeros are moved to the end.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d29"
+      }
+    },
+    {
+      "Input": "[0, 0, 0, 1]",
+      "Output": "[1, 0, 0, 0]",
+      "Explanation": "Only one non-zero element is present.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d2a"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d2b"
+  },
+  "Name": "Linear Search",
+  "Description": "Implement a linear search algorithm to find an element in an array.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[10, 20, 30, 40], target = 30",
+      "Output": "Index 2",
+      "Explanation": "Element found at index 2.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d2c"
+      }
+    },
+    {
+      "Input": "[1, 2, 3, 4], target = 5",
+      "Output": "-1",
+      "Explanation": "Element not found.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d2d"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d2e"
+  },
+  "Name": "Find missing number in an array",
+  "Description": "Given an array containing numbers from 1 to N with one missing number, find the missing number.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 2, 4, 5]",
+      "Output": "3",
+      "Explanation": "3 is the missing number.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d2f"
+      }
+    },
+    {
+      "Input": "[2, 3, 4, 5, 6]",
+      "Output": "1",
+      "Explanation": "1 is missing from the sequence.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d30"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d31"
+  },
+  "Name": "Find the number that appears once, and other numbers twice.",
+  "Description": "Find the unique element in an array where every other element appears twice.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[2, 2, 1, 3, 3]",
+      "Output": "1",
+      "Explanation": "1 appears only once.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d32"
+      }
+    },
+    {
+      "Input": "[4, 1, 2, 1, 2]",
+      "Output": "4",
+      "Explanation": "4 appears only once.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d33"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d34"
+  },
+  "Name": "Longest subarray with given sum K (positives)",
+  "Description": "Find the longest contiguous subarray whose sum equals K, assuming all elements are positive.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[1, 2, 3, 4, 5], K = 9",
+      "Output": "[2, 3, 4]",
+      "Explanation": "This subarray sums to 9.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d35"
+      }
+    },
+    {
+      "Input": "[1, 2, 3, 7, 5], K = 12",
+      "Output": "[3, 7, 2]",
+      "Explanation": "This subarray sums to 12.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d36"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d37"
+  },
+  "Name": "Longest subarray with sum K (Positives + Negatives)",
+  "Description": "Find the longest contiguous subarray whose sum equals K, considering both positive and negative numbers.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "[10, 5, 2, -2, 3, 1], K = 10",
+      "Output": "[5, 2, -2, 3, 1]",
+      "Explanation": "This subarray sums to 10.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d38"
+      }
+    },
+    {
+      "Input": "[1, -1, 5, -2, 3], K = 3",
+      "Output": "[5, -2]",
+      "Explanation": "This subarray sums to 3.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d39"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d3a"
+  },
+  "Name": "Find the Union",
+  "Description": "Find the union of two sorted arrays and return a new sorted array containing unique elements from both.",
+  "Difficulty": "Medium",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "arr1 = [1, 2, 3, 4, 5], arr2 = [2, 3, 5, 6]",
+      "Output": "[1, 2, 3, 4, 5, 6]",
+      "Explanation": "Both arrays are merged, and duplicates are removed.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d3b"
+      }
+    },
+    {
+      "Input": "arr1 = [1, 1, 1], arr2 = [1, 1, 1]",
+      "Output": "[1]",
+      "Explanation": "All elements in both arrays are the same, so only one instance remains.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d3c"
+      }
+    },
+    {
+      "Input": "arr1 = [], arr2 = [4, 5, 6]",
+      "Output": "[4, 5, 6]",
+      "Explanation": "Since the first array is empty, the union is just the second array.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d3d"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc33eac1bb682e9fd79d3e"
+  },
+  "Name": "Maximum Consecutive Ones",
+  "Description": "Find the maximum number of consecutive 1s in a binary array.",
+  "Difficulty": "Easy",
+  "Category": "Arrays",
+  "Examples": [
+    {
+      "Input": "arr = [1, 1, 0, 1, 1, 1]",
+      "Output": "3",
+      "Explanation": "The longest sequence of consecutive 1s is of length 3.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d3f"
+      }
+    },
+    {
+      "Input": "arr = [1, 0, 1, 1, 0, 1]",
+      "Output": "2",
+      "Explanation": "The longest sequence of consecutive 1s is of length 2.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d40"
+      }
+    },
+    {
+      "Input": "arr = [0, 0, 0, 0]",
+      "Output": "0",
+      "Explanation": "There are no 1s in the array.",
+      "_id": {
+        "$oid": "67dc33eac1bb682e9fd79d41"
+      }
+    }
+  ],
+  "__v": 0
+}]
