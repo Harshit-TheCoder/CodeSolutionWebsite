@@ -57,8 +57,37 @@ const Vaults=()=>{
 
   const updateProgram = (e, program)=>{
       e.stopPropagation();
+      e.preventDefault();
       setSelectedProgram(program);
   }
+
+  const handleUpdate = async () => {
+      if (!selectedProgram) return;
+      
+      const response = await fetch(`http://localhost:5000/update_program/${selectedProgram._id}`, {
+          method: "PUT",  // Ensure it's a PUT request
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              programName: selectedProgram.programName,
+              programCategory: selectedProgram.programCategory,
+              programLanguage: selectedProgram.programLanguage,
+              code: selectedProgram.code
+          })
+      });
+
+      if (!response.ok) {
+          console.error("Error updating program:", response.statusText);
+          alert("Failed to update program");
+          return;
+      }
+
+      const result = await response.json();
+      console.log("Updated Program:", result);
+      alert("Program updated successfully!");
+  };
+
 
   const searchProgram = async (event) =>{
       let key = event.target.value;
