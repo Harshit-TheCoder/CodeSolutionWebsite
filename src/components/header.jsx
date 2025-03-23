@@ -4,6 +4,8 @@ import LoginForm from './loginform';
 import SignUpForm from './signupform';
 import "../css/header.css";
 import FileUploadForm from './FileUploadForm';
+import AccountUpdateForm from './AccountUpdateForm';
+import GetProfileCard from './GetProfileCard';
 const Header=()=>{
     const navigate = useNavigate();
     const auth = localStorage.getItem('user');
@@ -33,6 +35,43 @@ const Header=()=>{
           </div>
         </div>
 
+        <div className="modal fade" id="staticBackdrop6" data-bs-backdrop="false" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel6" aria-hidden="true">
+          <div className="modal-dialog modal-dialog-scrollable modal-lg">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="staticBackdropLabel6">Give your Profile Card for LinkedIn</h1>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div className="modal-body" style={{height:"700px"}}>
+                  <GetProfileCard />
+
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                {/* <button type="button" className="btn btn-primary">Understood</button> */}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="modal fade" id="staticBackdrop5" data-bs-backdrop="false" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel5" aria-hidden="true">
+          <div className="modal-dialog modal-dialog-scrollable modal-lg">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="staticBackdropLabel5">Link your accounts to Techtrek</h1>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div className="modal-body" style={{height:"700px"}}>
+                  <AccountUpdateForm />
+
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                {/* <button type="button" className="btn btn-primary">Understood</button> */}
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div className="modal fade" id="staticBackdrop4" data-bs-backdrop="false" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel4" aria-hidden="true">
           <div className="modal-dialog modal-dialog-scrollable modal-lg">
@@ -120,6 +159,12 @@ const Header=()=>{
               </li>
               <li className="nav-item" id="9">
                 <a className="nav-link list_items" aria-current="page" href="/leaderboard">Leaderboard</a>
+              </li>
+              <li className="nav-item" id="10">
+                <a className="nav-link list_items" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">Link Accounts</a>
+              </li>
+              <li className="nav-item" id="10">
+                <a className="nav-link list_items" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">Profile Card</a>
               </li>
               <li className="nav-item" id="7">
                 <a className="nav-link list_items" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Upload</a>
