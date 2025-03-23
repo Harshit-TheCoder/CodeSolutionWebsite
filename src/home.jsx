@@ -61,10 +61,10 @@ function Home() {
                   <div className="info-coder-img-div"> 
                     <div className="info-div">
                       <h4>About:</h4>
-                      <h5>Name: <span>Harshit Harlalka</span></h5>
+                      <h5>Team Name: <span>Bit by Bit</span></h5>
                       <h5>Institute: <span>SRM Institute of Science and Technology</span></h5>
-                      <h5>Role: <span>Web Developer</span></h5>
-                      <h5>Links:</h5>
+                      <h5>Role: <span>Web Developers</span></h5>
+                      {/* <h5>Links:</h5>
                       <ul>
                         <li className="list-1"><a href="https://portfolio-website-nine-red.vercel.app/"><h5>Portfolio</h5></a> </li>
                         <li className="list-2">
@@ -73,7 +73,7 @@ function Home() {
                           <h5><img src={icon} alt="" style={{ width:"20px", height:"20px" ,marginRight:"3px"}}/>Linked In</h5>
                           </a>
                         </li>
-                      </ul>
+                      </ul> */}
                       
                     </div>
                     <div className="coder-img-div">
