@@ -355,7 +355,7 @@ const ExamPortal = () => {
                 overflow: "auto",
               }}
             /> */}
-              {/* <Editor 
+              <Editor 
                   height="500px"
                   language="cpp"
                   onChange={handleCodeChange}
@@ -366,7 +366,7 @@ const ExamPortal = () => {
                       fontSize : 14,
                       scrollBeyondLastLine: false,
                   }}
-              /> */}
+              />
               
             </div>
           </div>
