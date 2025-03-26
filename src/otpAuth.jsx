@@ -60,7 +60,7 @@ const OtpAuth = () =>{
                             </div>
                             <div>
                                 <center>
-                                    <h3 style={{ color: "white", fontFamily:"Poppins"}}>ALGOVAULT</h3>
+                                    <h3 style={{ color: "white", fontFamily:"Poppins"}}>TECHTREK</h3>
                                 </center>
                             </div>
                             <div className="mb-3">

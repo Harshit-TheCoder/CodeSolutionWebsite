@@ -34,7 +34,7 @@ function Home() {
                     <div className="guide" style={{backgroundColor:"rgba(21, 0, 64, 0.7)"}}>
                       <h5>Create Account</h5>
                         <p>
-                        AlgoVault allows you to upload your
+                        TechTrek allows you to upload your
                         programs just by creating an account.
                          your name, email, password and
                         generate a username.
@@ -64,6 +64,28 @@ function Home() {
                       <h5>Team Name: <span>Bit by Bit</span></h5>
                       <h5>Institute: <span>SRM Institute of Science and Technology</span></h5>
                       <h5>Role: <span>Web Developers</span></h5>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal">
+                          Check Tutorial
+                      </button>
+
+                      <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true" static-backdrop>
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="videoModalLabel" >Website Tutorial</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style={{width:"600px", height:"500px"}}>
+                              <iframe src="https://www.youtube.com/watch?v=88pf8QlJO3s" frameborder="0" style={{width:"100%", height:"100%"}}></iframe>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
                       {/* <h5>Links:</h5>
                       <ul>
                         <li className="list-1"><a href="https://portfolio-website-nine-red.vercel.app/"><h5>Portfolio</h5></a> </li>

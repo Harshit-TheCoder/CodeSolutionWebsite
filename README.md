@@ -42,6 +42,8 @@ To set up the project locally:
    MCQQuestions, bookmarks, dsaquestions, leaderboard, links, notes, programs, users and import the JSON data present in "project data" folder
    in the respective collections.
 
+7. for backend code check: https://github.com/Harshit-TheCoder/Algovault-Backend
+
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
